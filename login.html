@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Log in — Nebula</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/common.css" />
+<link rel="stylesheet" href="css/login.css" />
+</head>
+<body>
+<div class="bg-blobs"><span class="blob blob-1"></span><span class="blob blob-2"></span><span class="blob blob-3"></span></div>
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2L14 9L21 11L14 13L12 20L10 13L3 11L10 9L12 2Z" fill="#22d3ee"/></svg></span>
+      Nebula
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" data-nav>Home</a>
+      <a href="features.html" data-nav>Features</a>
+      <a href="pricing.html" data-nav>Pricing</a>
+      <a href="about.html" data-nav>About</a>
+      <a href="contact.html" data-nav>Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="login.html" class="login-link">Log in</a>
+      <a href="pricing.html" class="btn btn-primary">Start free</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<aside class="mobile-menu" id="mobileMenu">
+  <a href="index.html" class="mm-link" data-nav>Home</a>
+  <a href="features.html" class="mm-link" data-nav>Features</a>
+  <a href="pricing.html" class="mm-link" data-nav>Pricing</a>
+  <a href="about.html" class="mm-link" data-nav>About</a>
+  <a href="contact.html" class="mm-link" data-nav>Contact</a>
+  <a href="login.html" class="btn btn-ghost mm-login">Log in</a>
+  <a href="pricing.html" class="btn btn-primary mm-cta">Start free trial</a>
+  <p class="mm-foot">© <span data-year></span> Nebula Labs, Inc.</p>
+</aside>
+<div class="menu-backdrop" id="menuBackdrop"></div>
+
+<main class="login-main">
+  <div class="login-split">
+    <!-- LEFT: glass form -->
+    <div class="login-left">
+      <div class="glass-card reveal">
+        <div class="login-logo">
+          <span class="brand-mark lg"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2L14 9L21 11L14 13L12 20L10 13L3 11L10 9L12 2Z" fill="#22d3ee"/></svg></span>
+        </div>
+        <h1>Welcome back</h1>
+        <p class="login-sub">Log in to your Nebula workspace to pick up where you left off.</p>
+
+        <div class="social-row">
+          <button class="social-btn"><svg width="18" height="18" viewBox="0 0 24 24"><path fill="#fff" d="M21.35 11.1H12v2.96h5.35c-.23 1.5-1.6 4.4-5.35 4.4-3.22 0-5.84-2.66-5.84-5.94s2.62-5.94 5.84-5.94c1.83 0 3.06.78 3.76 1.45l2.56-2.47C16.86 3.96 14.7 3 12 3 6.98 3 3 6.98 3 12s3.98 9 9 9c5.2 0 8.64-3.65 8.64-8.78 0-.59-.06-1.04-.29-1.12z"/></svg> Google</button>
+          <button class="social-btn"><svg width="18" height="18" viewBox="0 0 24 24"><path fill="#fff" d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.4-2.2-.3-4.5-1.1-4.5-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.5 5 .3.3.7 1 .7 2v3c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg> GitHub</button>
+        </div>
+
+        <div class="divider"><span>or continue with email</span></div>
+
+        <form id="loginForm" novalidate>
+          <div class="field">
+            <label for="lemail">Email</label>
+            <input type="email" id="lemail" name="email" placeholder="you@company.com" required />
+            <span class="err" data-for="lemail">Enter a valid email.</span>
+          </div>
+          <div class="field">
+            <label for="lpass">Password</label>
+            <div class="pass-wrap">
+              <input type="password" id="lpass" name="password" placeholder="••••••••" required />
+              <button type="button" class="toggle-pass" id="togglePass" aria-label="Show password">👁</button>
+            </div>
+            <span class="err" data-for="lpass">Password is required.</span>
+          </div>
+          <div class="row-between">
+            <label class="check-row"><input type="checkbox" /> <span>Remember me</span></label>
+            <a href="#" class="forgot">Forgot password?</a>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg submit-btn">
+            <span class="btn-label">Log in</span>
+            <span class="spinner" hidden></span>
+          </button>
+          <p class="login-error" id="loginError" hidden>✗ Invalid credentials. Try again.</p>
+        </form>
+
+        <p class="signup-link">New to Nebula? <a href="pricing.html">Create an account →</a></p>
+      </div>
+    </div>
+
+    <!-- RIGHT: showcase panel -->
+    <div class="login-right">
+      <div class="showcase">
+        <span class="eyebrow">✦ What's new</span>
+        <h2>Your data, <span class="grad-text">finally fast.</span></h2>
+        <p>Log in to access live dashboards, AI insights, and the collaborative boards your team built this week.</p>
+        <ul class="perks">
+          <li><span class="perk-icon">⚡</span> Sub-second queries on streaming data</li>
+          <li><span class="perk-icon">✦</span> AI co-pilot that writes your SQL</li>
+          <li><span class="perk-icon">◆</span> 220+ integrations, zero setup</li>
+          <li><span class="perk-icon">⬢</span> SOC 2 + GDPR, enterprise-ready</li>
+        </ul>
+        <figure class="showcase-quote">
+          <blockquote>"Nebula replaced our entire BI stack. We log in every morning before coffee."</blockquote>
+          <figcaption><span class="avatar" style="background:var(--grad-warm)">D</span><div><strong>Dev Patel</strong><span>Head of Growth, Prism</span></div></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer footer-compact">
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© <span data-year></span> Nebula Labs, Inc. All rights reserved.</p>
+      <p>Made with precision in San Francisco</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/common.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

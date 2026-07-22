@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About — Nebula</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/common.css" />
+<link rel="stylesheet" href="css/about.css" />
+</head>
+<body>
+<div class="bg-blobs"><span class="blob blob-1"></span><span class="blob blob-2"></span><span class="blob blob-3"></span></div>
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2L14 9L21 11L14 13L12 20L10 13L3 11L10 9L12 2Z" fill="#22d3ee"/></svg></span>
+      Nebula
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" data-nav>Home</a>
+      <a href="features.html" data-nav>Features</a>
+      <a href="pricing.html" data-nav>Pricing</a>
+      <a href="about.html" data-nav>About</a>
+      <a href="contact.html" data-nav>Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="login.html" class="login-link">Log in</a>
+      <a href="pricing.html" class="btn btn-primary">Start free</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<aside class="mobile-menu" id="mobileMenu">
+  <a href="index.html" class="mm-link" data-nav>Home</a>
+  <a href="features.html" class="mm-link" data-nav>Features</a>
+  <a href="pricing.html" class="mm-link" data-nav>Pricing</a>
+  <a href="about.html" class="mm-link" data-nav>About</a>
+  <a href="contact.html" class="mm-link" data-nav>Contact</a>
+  <a href="login.html" class="btn btn-ghost mm-login">Log in</a>
+  <a href="pricing.html" class="btn btn-primary mm-cta">Start free trial</a>
+  <p class="mm-foot">© <span data-year></span> Nebula Labs, Inc.</p>
+</aside>
+<div class="menu-backdrop" id="menuBackdrop"></div>
+
+<main>
+  <section class="about-hero">
+    <div class="container about-hero-inner">
+      <div class="about-copy reveal">
+        <span class="eyebrow">✦ Our story</span>
+        <h1>We're building the <span class="grad-text-warm">analytics layer</span> for the next 10,000 companies.</h1>
+        <p>Nebula started in 2021 when three data engineers got tired of stitching together five tools just to answer one question. We believed analytics should feel instant, collaborative, and built into the product — not bolted on as an afterthought.</p>
+      </div>
+      <div class="about-stats reveal d2">
+        <div><strong>2021</strong><span>Founded</span></div>
+        <div><strong>84</strong><span>People</span></div>
+        <div><strong>$42M</strong><span>Series B</span></div>
+        <div><strong>12k+</strong><span>Customers</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="values">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">What we believe</span>
+        <h2>Principles, not posters.</h2>
+      </div>
+      <div class="values-grid">
+        <div class="value-card reveal">
+          <div class="value-num">01</div>
+          <h3>Speed is a feature</h3>
+          <p>If a dashboard takes longer to load than to think about, it's broken. We obsess over milliseconds because your time is the bottleneck.</p>
+        </div>
+        <div class="value-card reveal d1">
+          <div class="value-num">02</div>
+          <h3>Data is a product</h3>
+          <p>Metrics deserve the same craft as UI. Versioned, tested, documented, and shipped — not dumped in a wiki no one reads.</p>
+        </div>
+        <div class="value-card reveal d2">
+          <div class="value-num">03</div>
+          <h3>Default to open</h3>
+          <p>Internal transparency builds trust. We default to sharing what we build, how we decide, and what we got wrong.</p>
+        </div>
+        <div class="value-card reveal d3">
+          <div class="value-num">04</div>
+          <h3>Hire for range</h3>
+          <p>We'd rather hire one person who can span three disciplines than three who each do one. Curiosity beats credentials.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!--==================================
+        MISSION & VISION
+===================================-->
+
+<section class="mission">
+
+    <div class="container">
+
+        <div class="section-head center reveal">
+
+            <span class="eyebrow">
+                ✦ Mission & Vision
+            </span>
+
+            <h2>
+                Building the future of
+                <span class="grad-text">
+                    intelligent analytics.
+                </span>
+            </h2>
+
+            <p>
+                Every business deserves instant access to reliable insights.
+                Our mission is to eliminate complexity so teams can focus on
+                making better decisions—not managing data.
+            </p>
+
+        </div>
+
+        <div class="mission-grid">
+
+            <!-- LEFT -->
+
+            <div class="mission-content reveal">
+
+                <div class="mission-card">
+
+                    <div class="mission-icon">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+
+                    <h3>Our Mission</h3>
+
+                    <p>
+                        To empower every business with a unified analytics
+                        platform that transforms raw data into real-time,
+                        actionable insights through AI and automation.
+                    </p>
+
+                </div>
+
+                <div class="mission-card reveal d1">
+
+                    <div class="mission-icon vision">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+
+                    <h3>Our Vision</h3>
+
+                    <p>
+                        To become the world's most trusted analytics platform,
+                        where every decision is powered by intelligent,
+                        accessible, and beautifully designed data experiences.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="mission-image reveal d2">
+
+                <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&q=80"
+                alt="Nebula Team">
+
+                <div class="floating-badge">
+
+                    <strong>12,000+</strong>
+
+                    <span>Teams Growing with Nebula</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==================================
+        WHY CHOOSE NEBULA
+===================================-->
+
+<section class="why-nebula">
+
+    <div class="container"> 
+
+        <div class="why-grid">
+
+            <!-- LEFT IMAGE -->
+
+            <div class="why-image reveal">
+
+                <img
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80"
+                alt="Team analyzing business dashboard">
+
+                <div class="experience-card">
+
+                    <strong>99.99%</strong>
+
+                    <span>Platform Uptime</span>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT CONTENT -->
+
+            <div class="why-content reveal d1">
+
+                <span class="eyebrow">
+                    ✦ Why Choose Nebula
+                </span>
+
+                <h2>
+
+                    Built for teams that
+                    <span class="grad-text">
+
+                        move fast.
+
+                    </span>
+
+                </h2>
+
+                <p>
+
+                    Thousands of modern companies trust Nebula to unify
+                    their analytics, automate reporting, and uncover
+                    AI-powered insights—all from a single platform.
+
+                </p>
+
+                <div class="why-list">
+
+                    <div class="why-item">
+
+                        <div class="why-icon">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>Lightning Fast Performance</h3>
+
+                            <p>
+                                Analyze millions of records in seconds with
+                                our optimized analytics engine.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="why-item">
+
+                        <div class="why-icon">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>AI-Powered Intelligence</h3>
+
+                            <p>
+                                Detect trends, predict outcomes, and receive
+                                smart recommendations automatically.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="why-item">
+
+                        <div class="why-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>Enterprise Security</h3>
+
+                            <p>
+                                Role-based access, encryption, SSO, and
+                                enterprise-grade security built in.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="why-item">
+
+                        <div class="why-icon">
+                            <i class="fa-solid fa-plug"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>220+ Integrations</h3>
+
+                            <p>
+                                Connect the tools your team already uses
+                                without changing your workflow.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==================================
+        LIFE AT NEBULA
+===================================-->
+
+<section class="life-nebula">
+
+    <div class="container">
+
+        <div class="section-head center reveal">
+
+            <span class="eyebrow">
+                ✦ Life at Nebula
+            </span>
+
+            <h2>
+
+                Building amazing products
+                <span class="grad-text">
+
+                    starts with amazing people.
+
+                </span>
+
+            </h2>
+
+            <p>
+
+                We believe great work happens when talented people have
+                the freedom to collaborate, experiment, and enjoy what
+                they build together.
+
+            </p>
+
+        </div>
+
+        <div class="life-gallery">
+
+            <div class="gallery-large reveal">
+
+                <img
+                src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200&q=80"
+                alt="Nebula Office">
+
+            </div>
+
+            <div class="gallery-small reveal d1">
+
+                <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80"
+                alt="Team Collaboration">
+
+            </div>
+
+            <div class="gallery-small reveal d2">
+
+                <img
+                src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800&q=80"
+                alt="Meeting">
+
+            </div>
+
+            <div class="gallery-small reveal d3">
+
+                <img
+                src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800&q=80"
+                alt="Workspace">
+
+            </div>
+
+            <div class="gallery-small reveal d3">
+
+                <img
+                src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800&q=80"
+                alt="Workspace">
+
+            </div>
+
+        </div>
+
+        <div class="culture-grid">
+
+            <div class="culture-card reveal">
+                <i class="fa-solid fa-lightbulb"></i>
+                <h3>Innovation</h3>
+                <p>We challenge ideas, experiment often, and learn quickly.</p>
+            </div>
+
+            <div class="culture-card reveal d1">
+                <i class="fa-solid fa-globe"></i>
+                <h3>Remote First</h3>
+                <p>Work from anywhere while staying connected with your team.</p>
+            </div>
+
+            <div class="culture-card reveal d2">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h3>Continuous Learning</h3>
+                <p>Learning budgets, mentorship, and conferences every year.</p>
+            </div>
+
+            <div class="culture-card reveal d3">
+                <i class="fa-solid fa-heart"></i>
+                <h3>Well-being</h3>
+                <p>Healthy teams build better products. Balance matters.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+  <!-- TIMELINE -->
+  <section class="timeline-section">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">The journey</span>
+        <h2>From a hackathon to <span class="grad-text">12,000 teams.</span></h2>
+      </div>
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <span class="tl-date">Mar 2021</span>
+            <h3>Idea at a hackathon</h3>
+            <p>Three engineers build a real-time query engine in 48 hours. Wins "Most Likely to Be a Company." It is.</p>
+          </div>
+        </div>
+        <div class="tl-item reveal d1">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <span class="tl-date">Aug 2021</span>
+            <h3>First paying customer</h3>
+            <p>Orbit signs on for $200/mo. We deliver from a shared apartment. The dashboard still runs in production today.</p>
+          </div>
+        </div>
+        <div class="tl-item reveal d2">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <span class="tl-date">Jan 2022</span>
+            <h3>Seed: $5.2M</h3>
+            <p>Led by Founders Fund. We hire our first six engineers and ship the AI co-pilot prototype by summer.</p>
+          </div>
+        </div>
+        <div class="tl-item reveal d3">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <span class="tl-date">Jun 2023</span>
+            <h3>Series A: $14M</h3>
+            <p>1,000 customers. SOC 2 Type II. We open the SF office and ship 220 integrations by year-end.</p>
+          </div>
+        </div>
+        <div class="tl-item reveal d4">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <span class="tl-date">Feb 2025</span>
+            <h3>Series B: $42M</h3>
+            <p>12,000 teams. 4.2B events/day. We launch embedded analytics and our enterprise tier. The rest is still ahead.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!--==================================
+        GLOBAL PRESENCE
+===================================-->
+
+<section class="global-presence">
+
+    <div class="container">
+
+        <div class="section-head center reveal">
+
+            <span class="eyebrow">
+                ✦ Global Presence
+            </span>
+
+            <h2>
+                Trusted by teams across
+                <span class="grad-text">
+                    the world.
+                </span>
+            </h2>
+
+            <p>
+                From fast-growing startups to enterprise organizations,
+                Nebula powers analytics for businesses in more than
+                85 countries.
+            </p>
+
+        </div>
+
+        <div class="map-wrapper reveal">
+
+            <img
+            src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=1400&q=80"
+            alt="World Map">
+
+            <div class="map-card sf">
+                📍 San Francisco
+            </div>
+
+            <div class="map-card london">
+                📍 London
+            </div>
+
+            <div class="map-card singapore">
+                📍 Singapore
+            </div>
+
+            <div class="map-card dubai">
+                📍 Dubai
+            </div>
+
+        </div>
+
+        <div class="global-stats">
+
+            <div class="global-card reveal">
+                <h3>85+</h3>
+                <span>Countries</span>
+            </div>
+
+            <div class="global-card reveal d1">
+                <h3>12K+</h3>
+                <span>Customers</span>
+            </div>
+
+            <div class="global-card reveal d2">
+                <h3>24/7</h3>
+                <span>Support</span>
+            </div>
+
+            <div class="global-card reveal d3">
+                <h3>6</h3>
+                <span>Global Offices</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==================================
+        LEADERSHIP TEAM
+===================================-->
+
+<section class="leadership">
+
+    <div class="container">
+
+        <div class="section-head center reveal">
+
+            <span class="eyebrow">
+                ✦ Leadership Team
+            </span>
+
+            <h2>
+
+                Meet the people behind
+                <span class="grad-text">
+
+                    Nebula.
+
+                </span>
+
+            </h2>
+
+            <p>
+
+                Engineers, designers, and operators working together
+                to build the future of intelligent analytics.
+
+            </p>
+
+        </div>
+
+        <div class="leadership-grid">
+
+            <!-- CARD -->
+
+            <article class="leader-card reveal">
+
+                <div class="leader-image">
+
+                    <img src="images/team/team-1.jpg"
+                         alt="Sarah Chen">
+
+                </div>
+
+                <h3>Sarah Chen</h3>
+
+                <span>CEO & Co-Founder</span>
+
+                <p>
+
+                    Former Stripe engineering leader with over
+                    a decade of experience building scalable
+                    financial platforms.
+
+                </p>
+
+                <div class="leader-social">
+
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+
+                </div>
+
+            </article>
+
+
+            <!-- Card-2 -->
+            <article class="leader-card reveal d4">
+
+    <div class="leader-image">
+        <img src="images/team/team-5.jpg"
+             alt="Daniel Brooks">
+    </div>
+
+    <h3>Daniel Brooks</h3>
+
+    <span>Head of Engineering</span>
+
+    <p>
+        Leads Nebula's platform engineering team, building reliable,
+        scalable infrastructure that powers billions of analytics events.
+    </p>
+
+    <div class="leader-social">
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+
+</article>
+
+<!-- Card-3 -->
+<article class="leader-card reveal d5">
+
+    <div class="leader-image">
+        <img src="images/team/team-6.jpg"
+             alt="Emily Carter">
+    </div>
+
+    <h3>Emily Carter</h3>
+
+    <span>VP of Customer Success</span>
+
+    <p>
+        Partners with enterprise customers to maximize business impact,
+        ensuring every team gets measurable value from Nebula.
+    </p>
+
+    <div class="leader-social">
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+
+</article>
+
+<!-- Card-4 -->
+<article class="leader-card reveal d6">
+
+    <div class="leader-image">
+        <img src="images/team/team-7.jpg"
+             alt="Noah Patel">
+    </div>
+
+    <h3>Noah Patel</h3>
+
+    <span>Director of AI Research</span>
+
+    <p>
+        Oversees AI innovation, developing intelligent models that
+        transform complex business data into actionable insights.
+    </p>
+
+    <div class="leader-social">
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+
+</article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==================================
+        OFFICE GALLERY
+===================================-->
+
+<section class="office-gallery">
+
+    <div class="container">
+
+        <div class="section-head center reveal">
+
+            <span class="eyebrow">
+                ✦ Office Gallery
+            </span>
+
+            <h2>
+
+                Where great ideas
+                <span class="grad-text">
+                    come to life.
+                </span>
+
+            </h2>
+
+            <p>
+                From collaborative workspaces to creative meeting rooms,
+                every corner of Nebula is designed to inspire innovation
+                and teamwork.
+            </p>
+
+        </div>
+
+        <div class="office-grid">
+
+            <div class="office-item large reveal">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80" alt="Main Office">
+                <div class="office-overlay">
+                    <h3>Main Workspace</h3>
+                    <span>Open Collaboration</span>
+                </div>
+            </div>
+
+            <div class="office-item reveal d1">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&q=80" alt="Meeting Room">
+                <div class="office-overlay">
+                    <h3>Strategy Room</h3>
+                </div>
+            </div>
+
+            <div class="office-item reveal d2">
+                <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800&q=80" alt="Collaboration">
+                <div class="office-overlay">
+                    <h3>Brainstorming</h3>
+                </div>
+            </div>
+
+            <div class="office-item reveal d3">
+                <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1200&q=80" alt="Workspace">
+                <div class="office-overlay">
+                    <h3>Creative Space</h3>
+                </div>
+            </div>
+
+            <div class="office-item reveal d4">
+                <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=1200&q=80" alt="Coffee Area">
+                <div class="office-overlay">
+                    <h3>Coffee Lounge</h3>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+  <!-- TEAM -->
+  <!-- <section class="team">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">The people</span>
+        <h2>Who's behind Nebula.</h2>
+        <p>A small team of engineers, designers, and operators who've shipped at Stripe, Linear, Snowflake, and Figma.</p>
+      </div>
+      <div class="team-grid">
+        <article class="team-card reveal">
+          <div class="team-avatar" style="background:var(--grad-primary)">AC</div>
+          <h3>Aria Chen</h3><span>CEO & Co-founder</span>
+          <p>Ex-Stripe. Built the data infra behind Stripe Sigma. Believes the best metric is the one you actually check.</p>
+        </article>
+        <article class="team-card reveal d1">
+          <div class="team-avatar" style="background:var(--grad-warm)">MK</div>
+          <h3>Marcus Kim</h3><span>CTO & Co-founder</span>
+          <p>Ex-Snowflake query engine team. Wrote our columnar core on weekends before it was a company.</p>
+        </article>
+        <article class="team-card reveal d2">
+          <div class="team-avatar" style="background:var(--grad-cool)">RO</div>
+          <h3>Rio Okafor</h3><span>Head of Design</span>
+          <p>Ex-Linear. Thinks dashboards should feel like a tool you love, not a report you tolerate.</p>
+        </article>
+        <article class="team-card reveal d3">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#fbbf24,#fb7185)">SL</div>
+          <h3>Sara Liu</h3><span>Head of GTM</span>
+          <p>Ex-Figma. Sold Figma to engineers before it was cool. Now doing the same for data.</p>
+        </article>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- CTA -->
+  <section class="careers-cta">
+    <div class="container">
+      <div class="cta-box reveal">
+        <div class="cta-glow"></div>
+        <h2>We're hiring. <span class="grad-text">Come build with us.</span></h2>
+        <p>14 open roles across engineering, design, and go-to-market. Remote-friendly, async-first, equity for everyone.</p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-primary btn-lg">See open roles</a>
+          <a href="contact.html" class="btn btn-ghost btn-lg">Say hello</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand-mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2L14 9L21 11L14 13L12 20L10 13L3 11L10 9L12 2Z" fill="#22d3ee"/></svg></span>
+          Nebula
+        </a>
+        <p>The unified analytics platform for teams who treat data as a product, not a project.</p>
+        <div class="socials">
+          <a href="#" aria-label="Twitter"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 5.8c-.7.3-1.5.5-2.3.6.8-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1a4 4 0 0 0-6.8 3.6A11.3 11.3 0 0 1 3 4.8a4 4 0 0 0 1.2 5.3c-.6 0-1.2-.2-1.7-.5a4 4 0 0 0 3.2 4 4 4 0 0 1-1.8.1 4 4 0 0 0 3.7 2.8A8 8 0 0 1 2 18.6a11.3 11.3 0 0 0 6.1 1.8c7.3 0 11.3-6 11.3-11.3v-.5c.8-.6 1.5-1.3 2-2.1z"/></svg></a>
+          <a href="#" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.4-2.2-.3-4.5-1.1-4.5-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.5 5 .3.3.7 1 .7 2v3c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.6-2 3.9 0 4.5 2.5 4.5 5.8V21h-4v-5.3c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21H9z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Product</h4><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="#">Integrations</a><a href="#">Changelog</a></div>
+      <div class="footer-col"><h4>Company</h4><a href="about.html">About</a><a href="#">Careers</a><a href="contact.html">Contact</a><a href="#">Blog</a></div>
+      <div class="footer-col"><h4>Resources</h4><a href="#">Docs</a><a href="#">API reference</a><a href="#">Community</a><a href="#">Status</a></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span data-year></span> Nebula Labs, Inc. All rights reserved.</p>
+      <p>Made with precision in San Francisco</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/common.js"></script>
+<script src="js/about.js"></script>
+</body>
+</html>

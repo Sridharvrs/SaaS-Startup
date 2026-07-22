@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>NovaFlow — Admin Control Center</title>
+<link rel="stylesheet" href="css/dashboards.css" />
+<link rel="stylesheet" href="css/admin.css" />
+</head>
+<body class="app admin-app">
+
+<!-- Sidebar -->
+<aside class="sidebar" id="sidebar" aria-label="Admin navigation">
+  <div class="sb-head">
+    <div class="brand">
+      <span class="logo-dot"></span>
+      <span>NovaFlow</span>
+    </div>
+    <button class="sb-close" id="sbClose" aria-label="Close menu">✕</button>
+  </div>
+  <div class="sb-role">
+    <div class="avatar admin-av">AD</div>
+    <div>
+      <div class="sb-name">Ada Reyes</div>
+      <div class="sb-sub">Super Admin</div>
+    </div>
+  </div>
+  <nav class="sb-nav">
+    <button class="sb-link active" data-module="overview"><span class="ic">▦</span>Overview</button>
+    <button class="sb-link" data-module="users"><span class="ic">◉</span>Users</button>
+    <button class="sb-link" data-module="revenue"><span class="ic">$</span>Revenue</button>
+    <button class="sb-link" data-module="products"><span class="ic">◈</span>Products</button>
+    <button class="sb-link" data-module="reports"><span class="ic">◆</span>Reports</button>
+    <button class="sb-link" data-module="audit"><span class="ic">⚑</span>Audit Log</button>
+    <button class="sb-link" data-module="settings"><span class="ic">⚙</span>Settings</button>
+  </nav>
+  <div class="sb-foot">
+    <a href="index.html" class="sb-back">← Switch role</a>
+  </div>
+</aside>
+<div class="backdrop" id="backdrop"></div>
+
+<!-- Main -->
+<main class="main">
+  <header class="topbar">
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="crumbs">
+      <span class="c-role">Admin</span>
+      <span class="c-sep">/</span>
+      <span class="c-page" id="crumbPage">Overview</span>
+    </div>
+    <div class="top-actions">
+      <div class="search"><input placeholder="Search users, invoices, logs…" /></div>
+      <button class="icon-btn" title="Notifications">🔔<span class="dot"></span></button>
+      <div class="avatar admin-av sm">AD</div>
+    </div>
+  </header>
+
+  <!-- Overview -->
+  <section class="module" data-module="overview">
+    <div class="hero-band">
+      <div>
+        <div class="eyebrow">Welcome back, Ada</div>
+        <h1>Platform is healthy — 4 alerts to review</h1>
+      </div>
+      <div class="hero-actions">
+        <button class="btn btn-ghost">Export</button>
+        <button class="btn btn-grad">New announcement</button>
+      </div>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi kpi-violet">
+        <div class="kpi-label">MRR</div>
+        <div class="kpi-value">$184,320</div>
+        <div class="kpi-delta up">▲ 12.4% vs last month</div>
+        <svg class="spark" viewBox="0 0 100 30" preserveAspectRatio="none"><polyline fill="none" stroke="#fff" stroke-width="2" points="0,22 10,18 20,20 30,12 40,15 50,9 60,11 70,6 80,10 90,4 100,7"/></svg>
+      </div>
+      <div class="kpi kpi-cyan">
+        <div class="kpi-label">Active Users</div>
+        <div class="kpi-value">28,914</div>
+        <div class="kpi-delta up">▲ 3.1%</div>
+        <svg class="spark" viewBox="0 0 100 30" preserveAspectRatio="none"><polyline fill="none" stroke="#fff" stroke-width="2" points="0,20 10,17 20,19 30,14 40,16 50,12 60,13 70,9 80,11 90,7 100,8"/></svg>
+      </div>
+      <div class="kpi kpi-rose">
+        <div class="kpi-label">Churn</div>
+        <div class="kpi-value">1.8%</div>
+        <div class="kpi-delta down">▼ 0.4%</div>
+        <svg class="spark" viewBox="0 0 100 30" preserveAspectRatio="none"><polyline fill="none" stroke="#fff" stroke-width="2" points="0,10 10,14 20,12 30,17 40,15 50,20 60,18 70,22 80,20 90,24 100,22"/></svg>
+      </div>
+      <div class="kpi kpi-lime">
+        <div class="kpi-label">Uptime</div>
+        <div class="kpi-value">99.98%</div>
+        <div class="kpi-delta up">▲ SLA met</div>
+        <svg class="spark" viewBox="0 0 100 30" preserveAspectRatio="none"><polyline fill="none" stroke="#0b0b18" stroke-width="2" points="0,6 100,6"/></svg>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="card">
+        <div class="card-head">
+          <h3>Revenue — last 12 months</h3>
+          <div class="pill-row">
+            <span class="pill active">Revenue</span><span class="pill">Signups</span><span class="pill">Churn</span>
+          </div>
+        </div>
+        <div class="bar-chart" id="revBars"></div>
+      </div>
+      <div class="card">
+        <h3>Live activity</h3>
+        <ul class="activity">
+          <li><span class="dot d-violet"></span>New signup: <b>maya@lumen.io</b><span class="t">2m</span></li>
+          <li><span class="dot d-cyan"></span>Invoice paid <b>#INV-3021</b> · $2,400<span class="t">6m</span></li>
+          <li><span class="dot d-rose"></span>Refund issued <b>#RF-118</b> · $89<span class="t">18m</span></li>
+          <li><span class="dot d-lime"></span>Deploy v2.14.3 shipped<span class="t">1h</span></li>
+          <li><span class="dot d-violet"></span>Role changed: <b>Ken → Editor</b><span class="t">2h</span></li>
+          <li><span class="dot d-cyan"></span>New workspace: <b>Orbit Labs</b><span class="t">3h</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Traffic by region</h3>
+      <div class="region-grid">
+        <div class="region"><span>North America</span><div class="bar"><i style="width:82%"></i></div><b>42%</b></div>
+        <div class="region"><span>Europe</span><div class="bar"><i style="width:64%;background:var(--cyan)"></i></div><b>28%</b></div>
+        <div class="region"><span>Asia</span><div class="bar"><i style="width:48%;background:var(--rose)"></i></div><b>19%</b></div>
+        <div class="region"><span>LATAM</span><div class="bar"><i style="width:22%;background:var(--lime)"></i></div><b>7%</b></div>
+        <div class="region"><span>Other</span><div class="bar"><i style="width:12%;background:var(--amber)"></i></div><b>4%</b></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Users -->
+  <section class="module hidden" data-module="users">
+    <div class="section-head">
+      <div><h1>Users</h1><p>12,482 total · 348 new this week</p></div>
+      <div class="hero-actions">
+        <button class="btn btn-ghost">Import CSV</button>
+        <button class="btn btn-grad">+ Invite user</button>
+      </div>
+    </div>
+    <div class="filter-row">
+      <input class="finput" placeholder="Search by name or email" />
+      <select class="finput"><option>All roles</option><option>Admin</option><option>Editor</option><option>Member</option></select>
+      <select class="finput"><option>All plans</option><option>Free</option><option>Pro</option><option>Scale</option></select>
+      <select class="finput"><option>Any status</option><option>Active</option><option>Suspended</option></select>
+    </div>
+    <div class="card no-pad">
+      <table class="tbl">
+        <thead><tr><th>User</th><th>Role</th><th>Plan</th><th>Status</th><th>Last active</th><th></th></tr></thead>
+        <tbody id="userTable"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Revenue -->
+  <section class="module hidden" data-module="revenue">
+    <div class="section-head"><div><h1>Revenue</h1><p>Financial performance and invoices</p></div></div>
+    <div class="kpi-grid three">
+      <div class="kpi kpi-violet"><div class="kpi-label">Gross</div><div class="kpi-value">$412,908</div><div class="kpi-delta up">▲ 8.2%</div></div>
+      <div class="kpi kpi-cyan"><div class="kpi-label">Net</div><div class="kpi-value">$367,145</div><div class="kpi-delta up">▲ 6.9%</div></div>
+      <div class="kpi kpi-rose"><div class="kpi-label">Refunds</div><div class="kpi-value">$3,204</div><div class="kpi-delta down">▼ 1.1%</div></div>
+    </div>
+    <div class="card">
+      <h3>Recent invoices</h3>
+      <table class="tbl">
+        <thead><tr><th>#</th><th>Customer</th><th>Amount</th><th>Status</th><th>Date</th></tr></thead>
+        <tbody>
+          <tr><td>INV-3041</td><td>Orbit Labs</td><td>$2,400</td><td><span class="tag t-green">Paid</span></td><td>Jul 21, 2026</td></tr>
+          <tr><td>INV-3040</td><td>Lumen Studio</td><td>$980</td><td><span class="tag t-green">Paid</span></td><td>Jul 20, 2026</td></tr>
+          <tr><td>INV-3039</td><td>Nimbus Co.</td><td>$4,120</td><td><span class="tag t-amber">Pending</span></td><td>Jul 19, 2026</td></tr>
+          <tr><td>INV-3038</td><td>Kite &amp; Co</td><td>$620</td><td><span class="tag t-red">Failed</span></td><td>Jul 18, 2026</td></tr>
+          <tr><td>INV-3037</td><td>Vertex AI</td><td>$8,900</td><td><span class="tag t-green">Paid</span></td><td>Jul 17, 2026</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="module hidden" data-module="products">
+    <div class="section-head"><div><h1>Products</h1><p>Manage plans, features & feature flags</p></div>
+      <button class="btn btn-grad">+ New product</button></div>
+    <div class="prod-grid">
+      <div class="prod-card"><div class="prod-tag">Core</div><h3>NovaFlow Cloud</h3><p>Realtime collaboration platform</p><div class="prod-stats"><span>3,204 seats</span><span>$142k MRR</span></div><div class="flags"><span class="flag on">RBAC</span><span class="flag on">SSO</span><span class="flag">Audit v2</span></div></div>
+      <div class="prod-card"><div class="prod-tag alt">Add-on</div><h3>AI Assistant</h3><p>Agentic AI for automated workflows</p><div class="prod-stats"><span>1,824 seats</span><span>$31k MRR</span></div><div class="flags"><span class="flag on">GPT</span><span class="flag on">Claude</span><span class="flag">Local LLM</span></div></div>
+      <div class="prod-card"><div class="prod-tag alt2">Beta</div><h3>Insights Pro</h3><p>Analytics & dashboards</p><div class="prod-stats"><span>486 seats</span><span>$11k MRR</span></div><div class="flags"><span class="flag on">Dashboards</span><span class="flag">Forecast</span></div></div>
+    </div>
+  </section>
+
+  <!-- Reports -->
+  <section class="module hidden" data-module="reports">
+    <div class="section-head"><div><h1>Reports</h1><p>Scheduled and on-demand analytics</p></div></div>
+    <div class="reports-grid">
+      <div class="rep"><div class="rep-ico" style="background:var(--grad)">◆</div><h4>Weekly growth</h4><p>Signups, activations, churn</p><span class="rep-meta">Every Mon · 9:00</span></div>
+      <div class="rep"><div class="rep-ico" style="background:linear-gradient(135deg,#22d3ee,#10b981)">$</div><h4>Financial summary</h4><p>MRR, ARR, refunds</p><span class="rep-meta">1st of month</span></div>
+      <div class="rep"><div class="rep-ico" style="background:linear-gradient(135deg,#f43f5e,#f59e0b)">◉</div><h4>Engagement</h4><p>DAU, WAU, session length</p><span class="rep-meta">Daily · 07:00</span></div>
+      <div class="rep"><div class="rep-ico" style="background:linear-gradient(135deg,#a855f7,#f43f5e)">⚑</div><h4>Security digest</h4><p>Failed logins, anomalies</p><span class="rep-meta">Every Fri</span></div>
+    </div>
+  </section>
+
+  <!-- Audit -->
+  <section class="module hidden" data-module="audit">
+    <div class="section-head"><div><h1>Audit Log</h1><p>Immutable record of admin actions</p></div></div>
+    <div class="timeline">
+      <div class="tl-item"><span class="tl-dot" style="background:var(--violet)"></span><div><b>ada.reyes@novaflow.io</b> changed role of <b>ken@lumen.io</b> to Editor<div class="tl-meta">Today · 14:22 · IP 10.4.1.9</div></div></div>
+      <div class="tl-item"><span class="tl-dot" style="background:var(--cyan)"></span><div><b>system</b> rotated API key <code>sk_live_***a2f</code><div class="tl-meta">Today · 09:03</div></div></div>
+      <div class="tl-item"><span class="tl-dot" style="background:var(--rose)"></span><div><b>ada.reyes</b> deleted workspace <b>Beta-Sandbox</b><div class="tl-meta">Yesterday · 18:41</div></div></div>
+      <div class="tl-item"><span class="tl-dot" style="background:var(--lime)"></span><div><b>deploy-bot</b> shipped release <b>v2.14.3</b><div class="tl-meta">Yesterday · 12:10</div></div></div>
+      <div class="tl-item"><span class="tl-dot" style="background:var(--amber)"></span><div><b>rin@novaflow.io</b> exported user list (12,482 rows)<div class="tl-meta">Jul 20 · 15:03</div></div></div>
+    </div>
+  </section>
+
+  <!-- Settings -->
+  <section class="module hidden" data-module="settings">
+    <div class="section-head"><div><h1>Settings</h1><p>Global platform configuration</p></div></div>
+    <div class="settings-grid">
+      <div class="card">
+        <h3>Branding</h3>
+        <label class="lbl">Platform name<input value="NovaFlow"/></label>
+        <label class="lbl">Primary color<input type="color" value="#7c3aed"/></label>
+        <label class="lbl">Support email<input value="hello@novaflow.io"/></label>
+        <button class="btn btn-grad">Save changes</button>
+      </div>
+      <div class="card">
+        <h3>Security</h3>
+        <div class="toggle-row"><span>Require 2FA for admins</span><label class="switch"><input type="checkbox" checked><i></i></label></div>
+        <div class="toggle-row"><span>Enforce SSO</span><label class="switch"><input type="checkbox"><i></i></label></div>
+        <div class="toggle-row"><span>IP allowlist</span><label class="switch"><input type="checkbox" checked><i></i></label></div>
+        <div class="toggle-row"><span>Session timeout · 30m</span><label class="switch"><input type="checkbox" checked><i></i></label></div>
+      </div>
+      <div class="card">
+        <h3>Integrations</h3>
+        <div class="integ"><b>Slack</b><span class="tag t-green">Connected</span></div>
+        <div class="integ"><b>Stripe</b><span class="tag t-green">Connected</span></div>
+        <div class="integ"><b>GitHub</b><span class="tag t-amber">Re-auth</span></div>
+        <div class="integ"><b>Linear</b><span class="tag t-red">Disconnected</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="js/admin.js"></script>
+</body>
+</html>

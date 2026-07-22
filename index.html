@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nebula — Analytics that actually move metrics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="css/common.css" />
+<link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+<div class="bg-blobs"><span class="blob blob-1"></span><span class="blob blob-2"></span><span class="blob blob-3"></span></div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2L14 9L21 11L14 13L12 20L10 13L3 11L10 9L12 2Z" fill="#22d3ee"/></svg></span>
+      Nebula
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" data-nav>Home</a>
+      <a href="features.html" data-nav>Features</a>
+      <a href="pricing.html" data-nav>Pricing</a>
+      <a href="about.html" data-nav>About</a>
+      <a href="contact.html" data-nav>Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="login.html" class="login-link">Log in</a>
+      <a href="pricing.html" class="btn btn-primary">Start free</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<aside class="mobile-menu" id="mobileMenu">
+  <a href="index.html" class="mm-link" data-nav>Home</a>
+  <a href="features.html" class="mm-link" data-nav>Features</a>
+  <a href="pricing.html" class="mm-link" data-nav>Pricing</a>
+  <a href="about.html" class="mm-link" data-nav>About</a>
+  <a href="contact.html" class="mm-link" data-nav>Contact</a>
+  <a href="login.html" class="btn btn-ghost mm-login">Log in</a>
+  <a href="pricing.html" class="btn btn-primary mm-cta">Start free trial</a>
+  <p class="mm-foot">© <span data-year></span> Nebula Labs, Inc.</p>
+</aside>
+<div class="menu-backdrop" id="menuBackdrop"></div>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <span class="eyebrow reveal">✦ Now with AI co-pilot</span>
+        <h1 class="reveal d1">Analytics that <span class="grad-text">actually move</span> your metrics.</h1>
+        <p class="reveal d2">Nebula unifies product, revenue, and customer data into one live picture — so your team stops guessing and starts shipping decisions backed by numbers.</p>
+        <div class="hero-cta reveal d3">
+          <a href="pricing.html" class="btn btn-primary btn-lg">Start 14-day trial</a>
+          <a href="features.html" class="btn btn-ghost btn-lg">▶ Watch demo</a>
+        </div>
+        <div class="hero-stats reveal d4">
+          <div><strong>12k+</strong><span>Teams shipping</span></div>
+          <div><strong>99.99%</strong><span>Uptime SLA</span></div>
+          <div><strong>4.9/5</strong><span>G2 rating</span></div>
+        </div>
+      </div>
+      <div class="hero-visual reveal d2">
+        <div class="dash-card">
+          <div class="dash-head">
+            <div class="dash-dots"><i></i><i></i><i></i></div>
+            <span>nebula · live</span>
+          </div>
+          <div class="dash-body">
+            <div class="dash-top">
+              <div>
+                <p class="dash-label">Monthly recurring revenue</p>
+                <p class="dash-value">$<span id="mrr">847,200</span></p>
+                <p class="dash-delta up">▲ 18.4% vs last month</p>
+              </div>
+              <div class="dash-spark" id="spark"></div>
+            </div>
+            <div class="dash-chart">
+              <div class="bar" style="--h:38%"></div>
+              <div class="bar" style="--h:52%"></div>
+              <div class="bar" style="--h:46%"></div>
+              <div class="bar" style="--h:70%"></div>
+              <div class="bar" style="--h:64%"></div>
+              <div class="bar" style="--h:88%"></div>
+              <div class="bar" style="--h:78%"></div>
+              <div class="bar" style="--h:100%"></div>
+            </div>
+            <div class="dash-rows">
+              <div class="dash-row"><span class="dot" style="background:#22d3ee"></span>Activation rate<span>b>72%</b></span></div>
+              <div class="dash-row"><span class="dot" style="background:#f472b6"></span>Churn<span>b>1.8%</b></span></div>
+              <div class="dash-row"><span class="dot" style="background:#a3e635"></span>Net retention<span>b>114%</b></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="float-pill pill-1"><span style="background:#22d3ee"></span>New record · 2,401 events/s</div>
+        <div class="float-pill pill-2"><span style="background:#f472b6"></span>AI insight ready</div>
+      </div>
+    </div>
+    <div class="marquee">
+      <div class="marquee-track">
+        <span>Trusted by teams at ◆ Linear ◆ Vercel ◆ Notion ◆ Figma ◆ Ramp ◆ Retool ◆ Loom ◆ Arc ◆ Linear ◆ Vercel ◆ Notion ◆ Figma ◆ Ramp ◆ Retool ◆ Loom ◆ Arc</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGOS -->
+  <section class="logos">
+    <div class="container">
+      <p class="logos-title reveal">Powering data teams at fast-moving companies</p>
+      <div class="logo-grid reveal d1">
+        <div class="logo-item">⬡ Hexagon</div>
+        <div class="logo-item">◈ Prism</div>
+        <div class="logo-item">✦ Stellar</div>
+        <div class="logo-item">⬢ Orbit</div>
+        <div class="logo-item">◆ Vertex</div>
+        <div class="logo-item">❖ Quanta</div>
+      </div>
+    </div>
+  </section>
+
+<!-- PROBLEM WE SOLVE -->
+<section class="problem">
+    <div class="container">
+
+        <div class="section-head center reveal">
+            <span class="eyebrow">✦ The Problem</span>
+
+            <h2>
+                Stop making decisions with
+                <span class="grad-text">disconnected data.</span>
+            </h2>
+
+            <p>
+                Your data is spread across dozens of platforms. Nebula unifies
+                everything into one intelligent workspace so your team spends
+                less time searching and more time growing.
+            </p>
+        </div>
+
+        <div class="problem-grid">
+
+            <!-- LEFT -->
+
+            <div class="problem-left reveal">
+
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+
+                    <div>
+                        <h4>Scattered Analytics</h4>
+                        <p>
+                            Revenue, product usage, and customer data live in
+                            different dashboards.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="problem-card">
+                    <div class="problem-icon pink">
+                        <i class="fa-solid fa-table"></i>
+                    </div>
+
+                    <div>
+                        <h4>Spreadsheet Chaos</h4>
+                        <p>
+                            Teams waste hours exporting CSV files and creating
+                            manual reports every week.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="problem-card">
+                    <div class="problem-icon green">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+
+                    <div>
+                        <h4>Slow Decisions</h4>
+                        <p>
+                            Valuable insights arrive too late to take action.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="problem-card">
+                    <div class="problem-icon orange">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <div>
+                        <h4>Disconnected Teams</h4>
+                        <p>
+                            Product, marketing, and finance all work from
+                            different versions of the truth.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="problem-right reveal d2">
+
+                <div class="network">
+
+                    <div class="center-node">
+
+                        <div class="pulse"></div>
+
+                        <div class="core">
+
+                            <i class="fa-solid fa-sparkles"></i>
+
+                            <span>Nebula</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="tool tool1">Stripe</div>
+
+                    <div class="tool tool2">Slack</div>
+
+                    <div class="tool tool3">HubSpot</div>
+
+                    <div class="tool tool4">GitHub</div>
+
+                    <div class="tool tool5">GA4</div>
+
+                    <div class="tool tool6">Postgres</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="problem-stats reveal">
+
+            <div>
+
+                <h3>42 hrs</h3>
+
+                <span>Saved every month</span>
+
+            </div>
+
+            <div>
+
+                <h3>18+</h3>
+
+                <span>Integrations</span>
+
+            </div>
+
+            <div>
+
+                <h3>95%</h3>
+
+                <span>Less manual reporting</span>
+
+            </div>
+
+            <div>
+
+                <h3>3×</h3>
+
+                <span>Faster decisions</span>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- BENTO FEATURES -->
+<section class="bento">
+    <div class="container">
+
+        <div class="section-head center reveal">
+            <span class="eyebrow">✦ Platform Features</span>
+
+            <h2>
+                Everything your team needs.
+                <span class="grad-text">Nothing they don't.</span>
+            </h2>
+
+            <p>
+                One modern platform built for product, engineering,
+                finance and growth teams.
+            </p>
+        </div>
+
+        <div class="bento-grid">
+
+            <!-- CARD 1 -->
+
+            <article class="bento-card large reveal">
+
+                <div class="card-icon">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+
+                <h3>AI Insights</h3>
+
+                <p>
+                    Ask questions in plain English and instantly uncover
+                    trends, anomalies and growth opportunities.
+                </p>
+
+                <div class="mini-chart">
+
+                    <div style="height:45%"></div>
+                    <div style="height:70%"></div>
+                    <div style="height:58%"></div>
+                    <div style="height:88%"></div>
+                    <div style="height:100%"></div>
+
+                </div>
+
+            </article>
+
+            <!-- CARD 2 -->
+
+            <article class="bento-card reveal">
+
+                <div class="card-icon cyan">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+
+                <h3>Live Sync</h3>
+
+                <p>
+                    Every event updates in real time with
+                    ultra-low latency.
+                </p>
+
+                <span class="live-dot"></span>
+
+            </article>
+
+            <!-- CARD 3 -->
+
+            <article class="bento-card reveal">
+
+                <div class="card-icon pink">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+
+                <h3>Collaboration</h3>
+
+                <p>
+                    Share dashboards and comments with
+                    your entire team.
+                </p>
+
+            </article>
+
+            <!-- CARD 4 -->
+
+            <article class="bento-card wide reveal">
+
+                <div class="card-icon green">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+
+                <h3>Predictive Analytics</h3>
+
+                <p>
+                    Machine learning forecasts churn,
+                    revenue and customer lifetime value
+                    before it happens.
+                </p>
+
+                <div class="progress-wrap">
+
+                    <div class="progress">
+                        <span></span>
+                    </div>
+
+                </div>
+
+            </article>
+
+            <!-- CARD 5 -->
+
+            <article class="bento-card reveal">
+
+                <div class="card-icon orange">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+
+                <h3>Enterprise Security</h3>
+
+                <p>
+                    SOC2, SSO, encryption and
+                    role-based permissions built in.
+                </p>
+
+            </article>
+
+            <!-- CARD 6 -->
+
+            <article class="bento-card reveal">
+
+                <div class="card-icon purple">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+
+                <h3>Developer API</h3>
+
+                <p>
+                    Integrate Nebula into your
+                    existing workflows in minutes.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- AI ASSISTANT -->
+<section class="ai-showcase">
+    <div class="container">
+
+        <div class="ai-grid">
+
+            <!-- LEFT CONTENT -->
+
+            <div class="ai-content reveal">
+
+                <span class="eyebrow">
+                    ✦ AI Co-Pilot
+                </span>
+
+                <h2>
+                    Meet your smartest
+                    <span class="grad-text">
+                        analytics assistant.
+                    </span>
+                </h2>
+
+                <p>
+                    Stop digging through dashboards. Ask Nebula AI anything in
+                    plain English and receive instant insights, charts, forecasts,
+                    and recommendations powered by your live business data.
+                </p>
+
+                <ul class="ai-list">
+
+                    <li>
+                        <span>✓</span>
+                        Ask questions naturally
+                    </li>
+
+                    <li>
+                        <span>✓</span>
+                        Automatic anomaly detection
+                    </li>
+
+                    <li>
+                        <span>✓</span>
+                        Revenue & churn predictions
+                    </li>
+
+                    <li>
+                        <span>✓</span>
+                        Generate reports in seconds
+                    </li>
+
+                </ul>
+
+                <a href="#" class="btn btn-primary">
+                    Try Nebula AI
+                </a>
+
+            </div>
+
+            <!-- RIGHT CHAT -->
+
+            <div class="ai-chat reveal d2">
+
+                <div class="chat-window">
+
+                    <div class="chat-header">
+
+                        <div class="chat-status">
+
+                            <span></span>
+
+                            Nebula AI
+
+                        </div>
+
+                        <small>Live Assistant</small>
+
+                    </div>
+
+                    <div class="chat-body">
+
+                        <div class="msg user">
+
+                            Which customers are most likely
+                            to churn this month?
+
+                        </div>
+
+                        <div class="msg ai">
+
+                            I found <strong>128 high-risk customers.</strong>
+
+                            Revenue at risk:
+                            <b>$24,300</b>
+
+                        </div>
+
+                        <div class="chart-box">
+
+                            <div style="height:40%"></div>
+                            <div style="height:62%"></div>
+                            <div style="height:75%"></div>
+                            <div style="height:90%"></div>
+                            <div style="height:100%"></div>
+
+                        </div>
+
+                        <div class="msg ai">
+
+                            Recommendation:
+
+                            Offer a 15% loyalty discount to
+                            Enterprise customers before renewal.
+
+                        </div>
+
+                    </div>
+
+                    <div class="chat-input">
+
+                        <span>
+                            Ask Nebula anything...
+                        </span>
+
+                        <button>
+
+                            <i class="fa-solid fa-arrow-up"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ==========================
+        INTEGRATIONS
+=========================== -->
+<section class="integrations">
+
+    <div class="container">
+
+        <div class="section-head center reveal">
+
+            <span class="eyebrow">
+                ✦ 220+ Integrations
+            </span>
+
+            <h2>
+                Connect with the tools
+                <span class="grad-text">
+                    your team already loves.
+                </span>
+            </h2>
+
+            <p>
+                No complicated setup. Connect your existing workflow in minutes
+                and let Nebula automatically sync data across your entire stack.
+            </p>
+
+        </div>
+
+        <div class="integration-wrapper reveal">
+
+            <div class="integration-grid">
+
+                <div class="integration-card">
+                    <i class="fa-brands fa-slack"></i>
+                    <span>Slack</span>
+                </div>
+
+                <div class="integration-card">
+                    <i class="fa-brands fa-github"></i>
+                    <span>GitHub</span>
+                </div>
+
+                <div class="integration-card">
+                    <i class="fa-brands fa-google"></i>
+                    <span>Google</span>
+                </div>
+
+                <div class="integration-card">
+                    <i class="fa-brands fa-figma"></i>
+                    <span>Figma</span>
+                </div>
+
+                <div class="integration-card">
+                    <i class="fa-solid fa-database"></i>
+                    <span>PostgreSQL</span>
+                </div>
+
+                <div class="integration-card">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <span>Stripe</span>
+                </div>
+
+                <div class="integration-card">
+                    <i class="fa-brands fa-discord"></i>
+                    <span>Discord</span>
+                </div>
+
+                <div class="integration-card">
+                    <i class="fa-brands fa-aws"></i>
+                    <span>AWS</span>
+                </div>
+
+                <div class="integration-card">
+                    <i class="fa-solid fa-chart-column"></i>
+                    <span>Google Analytics</span>
+                </div>
+
+                <div class="integration-card">
+                    <i class="fa-solid fa-cloud"></i>
+                    <span>HubSpot</span>
+                </div>
+
+                <div class="integration-card">
+                    <i class="fa-solid fa-code"></i>
+                    <span>REST API</span>
+                </div>
+
+                <div class="integration-card">
+                    <i class="fa-solid fa-plug"></i>
+                    <span>Zapier</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="integration-bottom reveal">
+
+            <div class="integration-stat">
+                <h3>220+</h3>
+                <span>Ready-to-use integrations</span>
+            </div>
+
+            <div class="integration-stat">
+                <h3>5 min</h3>
+                <span>Average setup time</span>
+            </div>
+
+            <div class="integration-stat">
+                <h3>99.99%</h3>
+                <span>Reliable synchronization</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==================================
+        HOW IT WORKS
+===================================-->
+<section class="how-it-works">
+
+    <div class="container">
+
+        <div class="section-head center reveal">
+
+            <span class="eyebrow">
+                ✦ How It Works
+            </span>
+
+            <h2>
+                Get started in
+                <span class="grad-text">less than 5 minutes.</span>
+            </h2>
+
+            <p>
+                Connect your tools, let Nebula organize your data,
+                and start making smarter decisions with AI-powered insights.
+            </p>
+
+        </div>
+
+        <div class="workflow">
+
+            <!-- STEP 1 -->
+
+            <div class="workflow-step reveal">
+
+                <div class="step-number">
+                    01
+                </div>
+
+                <div class="step-icon">
+
+                    <i class="fa-solid fa-plug"></i>
+
+                </div>
+
+                <h3>Connect</h3>
+
+                <p>
+                    Link your favorite tools like Stripe, Slack,
+                    GitHub, HubSpot, and databases in one click.
+                </p>
+
+            </div>
+
+            <!-- STEP 2 -->
+
+            <div class="workflow-line"></div>
+
+            <div class="workflow-step reveal d1">
+
+                <div class="step-number">
+                    02
+                </div>
+
+                <div class="step-icon cyan">
+
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                </div>
+
+                <h3>Sync Data</h3>
+
+                <p>
+                    Nebula automatically imports and organizes
+                    your business data in real time.
+                </p>
+
+            </div>
+
+            <!-- STEP 3 -->
+
+            <div class="workflow-line"></div>
+
+            <div class="workflow-step reveal d2">
+
+                <div class="step-number">
+                    03
+                </div>
+
+                <div class="step-icon pink">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                </div>
+
+                <h3>Analyze</h3>
+
+                <p>
+                    AI discovers trends, anomalies, revenue
+                    opportunities and customer behavior instantly.
+                </p>
+
+            </div>
+
+            <!-- STEP 4 -->
+
+            <div class="workflow-line"></div>
+
+            <div class="workflow-step reveal d3">
+
+                <div class="step-number">
+                    04
+                </div>
+
+                <div class="step-icon green">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </div>
+
+                <h3>Grow Faster</h3>
+
+                <p>
+                    Turn insights into action with live dashboards,
+                    alerts and automated reporting.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+  <!-- FEATURE SPLIT -->
+  <section class="split">
+    <div class="container split-inner">
+      <div class="split-copy reveal">
+        <span class="eyebrow">Real-time pipeline</span>
+        <h2>From event to insight in <span class="grad-text-warm">under 80ms.</span></h2>
+        <p>Stream billions of events through Nebula's columnar engine. Query terabytes with sub-second latency, and let the AI co-pilot surface anomalies before your standup.</p>
+        <ul class="check-list">
+          <li><span class="check">✓</span> Sub-second SQL on streaming data</li>
+          <li><span class="check">✓</span> Auto-detected anomalies & root cause</li>
+          <li><span class="check">✓</span> 220+ native integrations, no SDK required</li>
+        </ul>
+        <a href="features.html" class="btn btn-ghost">Explore the platform →</a>
+      </div>
+      <div class="split-visual reveal d2">
+        <div class="code-card">
+          <div class="code-head"><span>query.sql</span><span class="code-badge">live</span></div>
+          <pre class="code-block"><span class="kw">SELECT</span> user_id,
+       <span class="fn">count</span>(*) <span class="kw">AS</span> sessions,
+       <span class="fn">sum</span>(revenue) <span class="kw">AS</span> arr
+<span class="kw">FROM</span> events
+<span class="kw">WHERE</span> ts &gt; <span class="fn">now</span>() - <span class="num">7</span>
+<span class="kw">GROUP BY</span> user_id
+<span class="kw">ORDER BY</span> arr <span class="kw">DESC</span>
+<span class="kw">LIMIT</span> <span class="num">100</span>;</pre>
+          <div class="code-result">
+            <span class="ok">● Query ok · 84ms · 2.1M rows</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!--==================================
+        LIVE ACTIVITY
+===================================-->
+
+<section class="live-activity">
+
+    <div class="container">
+
+        <div class="section-head center reveal">
+
+            <span class="eyebrow">
+                ✦ Live Activity
+            </span>
+
+            <h2>
+                Watch Nebula work
+                <span class="grad-text">
+                    in real time.
+                </span>
+            </h2>
+
+            <p>
+                Every second, Nebula processes new events, detects anomalies,
+                syncs customer data, and delivers AI-powered insights.
+            </p>
+
+        </div>
+
+        <div class="activity-board reveal">
+
+            <div class="activity-header">
+
+                <div class="live-status">
+
+                    <span></span>
+
+                    System Live
+
+                </div>
+
+                <small>Updated just now</small>
+
+            </div>
+
+            <div class="activity-list">
+
+                <div class="activity-item">
+
+                    <div class="activity-icon success">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+
+                    <div class="activity-info">
+                        <h4>Stripe payment synchronized</h4>
+                        <span>2 seconds ago</span>
+                    </div>
+
+                    <div class="activity-tag">
+                        +$2,480
+                    </div>
+
+                </div>
+
+                <div class="activity-item">
+
+                    <div class="activity-icon ai">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+
+                    <div class="activity-info">
+                        <h4>AI detected revenue anomaly</h4>
+                        <span>12 seconds ago</span>
+                    </div>
+
+                    <div class="activity-tag">
+                        Alert
+                    </div>
+
+                </div>
+
+                <div class="activity-item">
+
+                    <div class="activity-icon sync">
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                    </div>
+
+                    <div class="activity-info">
+                        <h4>HubSpot contacts updated</h4>
+                        <span>25 seconds ago</span>
+                    </div>
+
+                    <div class="activity-tag">
+                        84 Records
+                    </div>
+
+                </div>
+
+                <div class="activity-item">
+
+                    <div class="activity-icon chart">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+
+                    <div class="activity-info">
+                        <h4>Weekly dashboard refreshed</h4>
+                        <span>1 minute ago</span>
+                    </div>
+
+                    <div class="activity-tag">
+                        Ready
+                    </div>
+
+                </div>
+
+                <div class="activity-item">
+
+                    <div class="activity-icon team">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <div class="activity-info">
+                        <h4>Marketing team viewed report</h4>
+                        <span>2 minutes ago</span>
+                    </div>
+
+                    <div class="activity-tag">
+                        12 Users
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==================================
+        SUCCESS STORY
+===================================-->
+
+<section class="success-story">
+
+    <div class="container">
+
+        <div class="section-head center reveal">
+
+            <span class="eyebrow">
+                ✦ Customer Success
+            </span>
+
+            <h2>
+                How Orbit increased
+                <span class="grad-text">
+                    revenue by 37%.
+                </span>
+            </h2>
+
+            <p>
+                Discover how fast-growing SaaS companies use Nebula
+                to replace spreadsheets, reduce churn, and unlock
+                real-time business intelligence.
+            </p>
+
+        </div>
+
+        <div class="story-box reveal">
+
+            <!-- LEFT -->
+
+            <div class="story-image">
+
+                <img
+                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900&q=80"
+                alt="Business Team">
+
+                <div class="story-tag">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Success Story
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="story-content">
+
+                <div class="company">
+
+                    <div class="company-logo">
+                        O
+                    </div>
+
+                    <div>
+
+                        <h4>Orbit Technologies</h4>
+
+                        <span>FinTech • 240 Employees</span>
+
+                    </div>
+
+                </div>
+
+                <blockquote>
+
+                    "Nebula completely transformed how our teams
+                    work with data. We eliminated manual reporting,
+                    identified revenue opportunities faster, and now
+                    make every decision using real-time insights."
+
+                </blockquote>
+
+                <div class="story-metrics">
+
+                    <div>
+
+                        <h3>37%</h3>
+
+                        <span>Revenue Growth</span>
+
+                    </div>
+
+                    <div>
+
+                        <h3>64%</h3>
+
+                        <span>Lower Churn</span>
+
+                    </div>
+
+                    <div>
+
+                        <h3>18×</h3>
+
+                        <span>Faster Reporting</span>
+
+                    </div>
+
+                    <div>
+
+                        <h3>12 hrs</h3>
+
+                        <span>Saved Every Week</span>
+
+                    </div>
+
+                </div>
+
+                <a href="#" class="btn btn-primary">
+
+                    Read Full Case Study
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+  <!-- STATS BAND -->
+  <section class="band">
+    <div class="container band-inner">
+      <div class="band-item reveal"><strong>4.2B</strong><p>Events processed daily</p></div>
+      <div class="band-item reveal d1"><strong>80ms</strong><p>Median query latency</p></div>
+      <div class="band-item reveal d2"><strong>220+</strong><p>Native integrations</p></div>
+      <div class="band-item reveal d3"><strong>SOC 2</strong><p>Type II certified</p></div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="quotes">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Loved by operators</span>
+        <h2>Don't take our word for it.</h2>
+        <p>Hear from the data teams who switched to Nebula and never looked back.</p>
+      </div>
+      <div class="quote-grid">
+        <figure class="quote-card reveal">
+          <div class="stars">★★★★★</div>
+          <blockquote>"We replaced three tools with Nebula. Our weekly review went from a 2-hour slide prep to a 10-minute live board. It paid for itself in week one."</blockquote>
+          <figcaption><span class="avatar" style="background:var(--grad-primary)">M</span><div><strong>Maya Chen</strong><span>VP Data, Orbit</span></div></figcaption>
+        </figure>
+        <figure class="quote-card reveal d1">
+          <div class="stars">★★★★★</div>
+          <blockquote>"The AI co-pilot caught a churn spike at 3am before it hit revenue. That single alert justified the entire annual contract."</blockquote>
+          <figcaption><span class="avatar" style="background:var(--grad-warm)">D</span><div><strong>Dev Patel</strong><span>Head of Growth, Prism</span></div></figcaption>
+        </figure>
+        <figure class="quote-card reveal d2">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Setup took an afternoon. By evening we were querying 18 months of product data in under a second. Genuinely unreal."</blockquote>
+          <figcaption><span class="avatar" style="background:var(--grad-cool)">S</span><div><strong>Sara Liu</strong><span>Founder, Stellar</span></div></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-final">
+    <div class="container">
+      <div class="cta-box reveal">
+        <div class="cta-glow"></div>
+        <h2>Ready to see your data <span class="grad-text">differently?</span></h2>
+        <p>Start a 14-day trial on the plan of your choice. No credit card. Cancel anytime.</p>
+        <div class="cta-actions">
+          <a href="pricing.html" class="btn btn-primary btn-lg">See pricing</a>
+          <a href="contact.html" class="btn btn-ghost btn-lg">Talk to sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand-mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2L14 9L21 11L14 13L12 20L10 13L3 11L10 9L12 2Z" fill="#22d3ee"/></svg></span>
+          Nebula
+        </a>
+        <p>The unified analytics platform for teams who treat data as a product, not a project.</p>
+        <div class="socials">
+          <a href="#" aria-label="Twitter"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 5.8c-.7.3-1.5.5-2.3.6.8-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1a4 4 0 0 0-6.8 3.6A11.3 11.3 0 0 1 3 4.8a4 4 0 0 0 1.2 5.3c-.6 0-1.2-.2-1.7-.5a4 4 0 0 0 3.2 4 4 4 0 0 1-1.8.1 4 4 0 0 0 3.7 2.8A8 8 0 0 1 2 18.6a11.3 11.3 0 0 0 6.1 1.8c7.3 0 11.3-6 11.3-11.3v-.5c.8-.6 1.5-1.3 2-2.1z"/></svg></a>
+          <a href="#" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.4-2.2-.3-4.5-1.1-4.5-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.5 5 .3.3.7 1 .7 2v3c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.6-2 3.9 0 4.5 2.5 4.5 5.8V21h-4v-5.3c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21H9z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="features.html">Features</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="#">Integrations</a>
+        <a href="#">Changelog</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="#">Careers</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Blog</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="#">Docs</a>
+        <a href="#">API reference</a>
+        <a href="#">Community</a>
+        <a href="#">Status</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span data-year></span> Nebula Labs, Inc. All rights reserved.</p>
+      <p>Made with precision in San Francisco</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/common.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pricing — Nebula</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/common.css" />
+<link rel="stylesheet" href="css/pricing.css" />
+</head>
+<body>
+<div class="bg-blobs"><span class="blob blob-1"></span><span class="blob blob-2"></span><span class="blob blob-3"></span></div>
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2L14 9L21 11L14 13L12 20L10 13L3 11L10 9L12 2Z" fill="#22d3ee"/></svg></span>
+      Nebula
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" data-nav>Home</a>
+      <a href="features.html" data-nav>Features</a>
+      <a href="pricing.html" data-nav>Pricing</a>
+      <a href="about.html" data-nav>About</a>
+      <a href="contact.html" data-nav>Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="login.html" class="login-link">Log in</a>
+      <a href="pricing.html" class="btn btn-primary">Start free</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<aside class="mobile-menu" id="mobileMenu">
+  <a href="index.html" class="mm-link" data-nav>Home</a>
+  <a href="features.html" class="mm-link" data-nav>Features</a>
+  <a href="pricing.html" class="mm-link" data-nav>Pricing</a>
+  <a href="about.html" class="mm-link" data-nav>About</a>
+  <a href="contact.html" class="mm-link" data-nav>Contact</a>
+  <a href="login.html" class="btn btn-ghost mm-login">Log in</a>
+  <a href="pricing.html" class="btn btn-primary mm-cta">Start free trial</a>
+  <p class="mm-foot">© <span data-year></span> Nebula Labs, Inc.</p>
+</aside>
+<div class="menu-backdrop" id="menuBackdrop"></div>
+
+<main>
+
+<!--==================================
+        ROI CALCULATOR
+===================================-->
+
+<section class="roi-calculator">
+
+    <div class="container">
+
+        <div class="section-head center reveal">
+            <span class="eyebrow">
+                ROI Calculator
+            </span>
+
+            <h2>
+                Discover how much
+                <span class="grad-text">
+                    Nebula can save your business.
+                </span>
+            </h2>
+
+            <p>
+                Estimate your monthly savings, productivity gains, and return on
+                investment based on your current workflow.
+            </p>
+        </div>
+
+        <div class="roi-wrapper reveal-up">
+
+            <!--========================
+                    LEFT PANEL
+            =========================-->
+
+            <div class="roi-form">
+
+                <h3>Calculate Your ROI</h3>
+
+                <p>
+                    Enter a few details about your business to estimate your
+                    potential savings.
+                </p>
+
+                <!-- Team Size -->
+
+                <div class="form-group">
+
+                    <label>Team Size</label>
+
+                    <input
+                        type="range"
+                        id="teamSize"
+                        min="5"
+                        max="500"
+                        value="25">
+
+                    <div class="range-value">
+
+                        <span>5</span>
+
+                        <strong id="teamValue">
+                            25 Members
+                        </strong>
+
+                        <span>500+</span>
+
+                    </div>
+
+                </div>
+
+                <!-- Monthly Events -->
+
+                <div class="form-group">
+
+                    <label>Monthly Events</label>
+
+                    <select id="monthlyEvents">
+
+                        <option>1 Million</option>
+
+                        <option>5 Million</option>
+
+                        <option selected>15 Million</option>
+
+                        <option>30 Million</option>
+
+                        <option>50 Million</option>
+
+                        <option>100 Million+</option>
+
+                    </select>
+
+                </div>
+
+                <!-- Current Cost -->
+
+                <div class="form-group">
+
+                    <label>Current Monthly Cost ($)</label>
+
+                    <input
+                        type="number"
+                        id="currentCost"
+                        value="1500">
+
+                </div>
+
+                <button class="btn btn-primary calculate-btn">
+
+                    Calculate Savings
+
+                </button>
+
+            </div>
+
+            <!--========================
+                    RIGHT PANEL
+            =========================-->
+
+            <div class="roi-results">
+
+                <div class="result-card">
+
+                    <div class="result-icon">
+
+                        💰
+
+                    </div>
+
+                    <h3 id="savingAmount">
+
+                        $2,480
+
+                    </h3>
+
+                    <span>
+
+                        Estimated Monthly Savings
+
+                    </span>
+
+                </div>
+
+                <div class="result-card">
+
+                    <div class="result-icon">
+
+                        ⏱
+
+                    </div>
+
+                    <h3 id="timeSaved">
+
+                        87 hrs
+
+                    </h3>
+
+                    <span>
+
+                        Team Time Saved
+
+                    </span>
+
+                </div>
+
+                <div class="result-card">
+
+                    <div class="result-icon">
+
+                        📈
+
+                    </div>
+
+                    <h3 id="roiValue">
+
+                        284%
+
+                    </h3>
+
+                    <span>
+
+                        Return on Investment
+
+                    </span>
+
+                </div>
+
+                <div class="result-card">
+
+                    <div class="result-icon">
+
+                        ⚡
+
+                    </div>
+
+                    <h3 id="productivity">
+
+                        +43%
+
+                    </h3>
+
+                    <span>
+
+                        Productivity Increase
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- section-2 -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow reveal">✦ Simple, transparent pricing</span>
+      <h1 class="reveal d1">Pricing that scales with <span class="grad-text">your ambition.</span></h1>
+      <p class="reveal d2">Start free, upgrade when you grow. No hidden fees, no usage traps. Cancel anytime.</p>
+
+      <div class="billing-toggle reveal d3">
+        <span class="toggle-label" id="labelMonthly">Monthly</span>
+        <button class="toggle" id="billingToggle" aria-pressed="false">
+          <span class="toggle-knob"></span>
+        </button>
+        <span class="toggle-label" id="labelYearly">Yearly</span>
+        <span class="save-badge">Save 20%</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing-section">
+    <div class="container">
+      <div class="plans">
+        <article class="plan reveal">
+          <div class="plan-head">
+            <h3>Starter</h3>
+            <p>For side projects & small teams getting started with analytics.</p>
+          </div>
+          <div class="plan-price">
+            <span class="currency">$</span><span class="amount" data-monthly="0" data-yearly="0">0</span><span class="per">/mo</span>
+          </div>
+          <p class="plan-note">Free forever · up to 3 users</p>
+          <a href="login.html" class="btn btn-ghost plan-btn">Get started</a>
+          <ul class="plan-features">
+            <li><span class="tick">✓</span>1M events / month</li>
+            <li><span class="tick">✓</span>3 live dashboards</li>
+            <li><span class="tick">✓</span>30-day data retention</li>
+            <li><span class="tick">✓</span>Community support</li>
+            <li class="muted"><span class="tick">—</span>AI co-pilot</li>
+            <li class="muted"><span class="tick">—</span>Anomaly detection</li>
+          </ul>
+        </article>
+
+        <article class="plan featured reveal d1">
+          <div class="plan-ribbon">Most popular</div>
+          <div class="plan-head">
+            <h3>Growth</h3>
+            <p>For scaling teams that live and breathe data every day.</p>
+          </div>
+          <div class="plan-price">
+            <span class="currency">$</span><span class="amount" data-monthly="99" data-yearly="79">99</span><span class="per">/mo</span>
+          </div>
+          <p class="plan-note">Billed <span id="growthCycle">monthly</span> · per workspace</p>
+          <a href="login.html" class="btn btn-primary plan-btn">Start 14-day trial</a>
+          <ul class="plan-features">
+            <li><span class="tick">✓</span>50M events / month</li>
+            <li><span class="tick">✓</span>Unlimited dashboards</li>
+            <li><span class="tick">✓</span>1-year data retention</li>
+            <li><span class="tick">✓</span>AI co-pilot (1k queries/mo)</li>
+            <li><span class="tick">✓</span>Anomaly detection</li>
+            <li><span class="tick">✓</span>Priority email support</li>
+          </ul>
+        </article>
+
+        <article class="plan reveal d2">
+          <div class="plan-head">
+            <h3>Enterprise</h3>
+            <p>For organizations with security, scale, and support needs.</p>
+          </div>
+          <div class="plan-price">
+            <span class="amount custom">Custom</span>
+          </div>
+          <p class="plan-note">Annual contract · volume pricing</p>
+          <a href="contact.html" class="btn btn-ghost plan-btn">Contact sales</a>
+          <ul class="plan-features">
+            <li><span class="tick">✓</span>Unlimited events</li>
+            <li><span class="tick">✓</span>Unlimited retention</li>
+            <li><span class="tick">✓</span>SSO, SCIM & audit logs</li>
+            <li><span class="tick">✓</span>Dedicated success manager</li>
+            <li><span class="tick">✓</span>99.99% uptime SLA</li>
+            <li><span class="tick">✓</span>On-prem & VPC deploy</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON TABLE -->
+  <section class="compare">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Compare plans</span>
+        <h2>Every feature, side by side.</h2>
+      </div>
+      <div class="table-wrap reveal d1">
+        <table class="compare-table">
+          <thead>
+            <tr><th>Features</th><th>Starter</th><th class="hl">Growth</th><th>Enterprise</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Events / month</td><td>1M</td><td class="hl">50M</td><td>Unlimited</td></tr>
+            <tr><td>Dashboards</td><td>3</td><td class="hl">Unlimited</td><td>Unlimited</td></tr>
+            <tr><td>Data retention</td><td>30 days</td><td class="hl">1 year</td><td>Unlimited</td></tr>
+            <tr><td>AI co-pilot</td><td><span class="x">—</span></td><td class="hl"><span class="v">✓</span></td><td><span class="v">✓</span> Unlimited</td></tr>
+            <tr><td>Anomaly detection</td><td><span class="x">—</span></td><td class="hl"><span class="v">✓</span></td><td><span class="v">✓</span></td></tr>
+            <tr><td>Integrations</td><td>20</td><td class="hl">220+</td><td>220+ + custom</td></tr>
+            <tr><td>SSO / SAML</td><td><span class="x">—</span></td><td class="hl"><span class="x">—</span></td><td><span class="v">✓</span></td></tr>
+            <tr><td>Support</td><td>Community</td><td class="hl">Priority</td><td>Dedicated</td></tr>
+            <tr><td>SLA</td><td>—</td><td class="hl">99.9%</td><td>99.99%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+<!--==================================
+        ENTERPRISE SECURITY
+===================================-->
+
+<section class="security">
+
+    <div class="container">
+
+        <div class="section-head center reveal">
+
+            <span class="eyebrow">
+                Enterprise Security
+            </span>
+
+            <h2>
+                Security built for
+                <span class="grad-text">
+                    enterprise confidence.
+                </span>
+            </h2>
+
+            <p>
+                Nebula is designed with enterprise-grade security, compliance,
+                and infrastructure trusted by modern organizations.
+            </p>
+
+        </div>
+
+        <div class="security-grid">
+
+            <div class="security-card reveal">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>SOC 2</h3>
+                <p>Type II certified infrastructure.</p>
+            </div>
+
+            <div class="security-card reveal d1">
+                <i class="fa-solid fa-certificate"></i>
+                <h3>ISO 27001</h3>
+                <p>International security standards.</p>
+            </div>
+
+            <div class="security-card reveal d2">
+                <i class="fa-solid fa-earth-europe"></i>
+                <h3>GDPR</h3>
+                <p>Privacy compliant across Europe.</p>
+            </div>
+
+            <div class="security-card reveal d3">
+                <i class="fa-solid fa-heart-pulse"></i>
+                <h3>HIPAA</h3>
+                <p>Healthcare-ready infrastructure.</p>
+            </div>
+
+            <div class="security-card reveal">
+                <i class="fa-solid fa-lock"></i>
+                <h3>AES-256</h3>
+                <p>End-to-end data encryption.</p>
+            </div>
+
+            <div class="security-card reveal d1">
+                <i class="fa-solid fa-user-shield"></i>
+                <h3>SSO & SAML</h3>
+                <p>Secure enterprise authentication.</p>
+            </div>
+
+            <div class="security-card reveal d2">
+                <i class="fa-solid fa-file-shield"></i>
+                <h3>Audit Logs</h3>
+                <p>Complete activity history.</p>
+            </div>
+
+            <div class="security-card reveal d3">
+                <i class="fa-solid fa-server"></i>
+                <h3>99.99% SLA</h3>
+                <p>Guaranteed enterprise uptime.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Billing questions</span>
+        <h2>Frequently asked.</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item reveal"><summary>Can I switch plans later?</summary><p>Yes — upgrade or downgrade anytime. Changes prorate automatically and reflect on your next invoice. No contracts lock you in on the Starter or Growth tiers.</p></details>
+        <details class="faq-item reveal d1"><summary>What counts as an "event"?</summary><p>Any row ingested into Nebula — a page view, a transaction, a backend log line. Deduplicated and sampled transparently so you only pay for what you actually query.</p></details>
+        <details class="faq-item reveal d2"><summary>Is there a free trial of paid plans?</summary><p>Every workspace gets a 14-day trial of Growth features on signup. No credit card required. You keep your data and dashboards if you stay on Starter afterward.</p></details>
+        <details class="faq-item reveal d3"><summary>Do you offer discounts for startups?</summary><p>Yes — eligible early-stage companies get 50% off Growth for the first year. Reach out via the contact page with your deck or website.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final">
+    <div class="container">
+      <div class="cta-box reveal">
+        <div class="cta-glow"></div>
+        <h2>Still deciding? <span class="grad-text">Talk to a human.</span></h2>
+        <p>We'll help you pick the right plan — or build a custom one if you need it.</p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-primary btn-lg">Contact sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand-mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2L14 9L21 11L14 13L12 20L10 13L3 11L10 9L12 2Z" fill="#22d3ee"/></svg></span>
+          Nebula
+        </a>
+        <p>The unified analytics platform for teams who treat data as a product, not a project.</p>
+        <div class="socials">
+          <a href="#" aria-label="Twitter"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 5.8c-.7.3-1.5.5-2.3.6.8-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1a4 4 0 0 0-6.8 3.6A11.3 11.3 0 0 1 3 4.8a4 4 0 0 0 1.2 5.3c-.6 0-1.2-.2-1.7-.5a4 4 0 0 0 3.2 4 4 4 0 0 1-1.8.1 4 4 0 0 0 3.7 2.8A8 8 0 0 1 2 18.6a11.3 11.3 0 0 0 6.1 1.8c7.3 0 11.3-6 11.3-11.3v-.5c.8-.6 1.5-1.3 2-2.1z"/></svg></a>
+          <a href="#" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.4-2.2-.3-4.5-1.1-4.5-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.5 5 .3.3.7 1 .7 2v3c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.6-2 3.9 0 4.5 2.5 4.5 5.8V21h-4v-5.3c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21H9z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Product</h4><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="#">Integrations</a><a href="#">Changelog</a></div>
+      <div class="footer-col"><h4>Company</h4><a href="about.html">About</a><a href="#">Careers</a><a href="contact.html">Contact</a><a href="#">Blog</a></div>
+      <div class="footer-col"><h4>Resources</h4><a href="#">Docs</a><a href="#">API reference</a><a href="#">Community</a><a href="#">Status</a></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span data-year></span> Nebula Labs, Inc. All rights reserved.</p>
+      <p>Made with precision in San Francisco</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/common.js"></script>
+<script src="js/pricing.js"></script>
+</body>
+</html>

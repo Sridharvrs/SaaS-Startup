@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>NovaFlow — Member Workspace</title>
+<link rel="stylesheet" href="css/dashboards.css" />
+<link rel="stylesheet" href="css/user.css" />
+</head>
+<body class="app user-app">
+
+<aside class="sidebar u-side" id="sidebar">
+  <div class="sb-head">
+    <div class="brand"><span class="logo-dot"></span><span>NovaFlow</span></div>
+    <button class="sb-close" id="sbClose" aria-label="Close">✕</button>
+  </div>
+  <div class="u-profile">
+    <div class="avatar user-av">JM</div>
+    <div>
+      <div class="sb-name">Jules Moreau</div>
+      <div class="sb-sub">Pro member · Orbit Labs</div>
+    </div>
+  </div>
+  <nav class="sb-nav">
+    <button class="sb-link active" data-module="home"><span class="ic">◐</span>Home</button>
+    <button class="sb-link" data-module="projects"><span class="ic">▤</span>Projects <span class="count">6</span></button>
+    <button class="sb-link" data-module="tasks"><span class="ic">✓</span>Tasks <span class="count">14</span></button>
+    <button class="sb-link" data-module="messages"><span class="ic">✎</span>Messages <span class="count hot">3</span></button>
+    <button class="sb-link" data-module="billing"><span class="ic">$</span>Billing</button>
+    <button class="sb-link" data-module="profile"><span class="ic">◉</span>Profile</button>
+  </nav>
+  <div class="upgrade-card">
+    <div class="up-title">Unlock Scale</div>
+    <div class="up-sub">Unlimited seats, priority support</div>
+    <button class="btn btn-grad" style="width:100%;margin-top:10px">Upgrade</button>
+  </div>
+  <div class="sb-foot"><a href="index.html" class="sb-back">← Switch role</a></div>
+</aside>
+<div class="backdrop" id="backdrop"></div>
+
+<main class="main u-main">
+  <header class="u-top">
+    <button class="menu-btn" id="menuBtn"><span></span><span></span><span></span></button>
+    <div class="greeting" id="greeting">Good afternoon, Jules</div>
+    <div class="u-top-actions">
+      <div class="search"><input placeholder="Search projects, tasks…"/></div>
+      <button class="icon-btn">🔔<span class="dot"></span></button>
+    </div>
+  </header>
+
+  <!-- Home -->
+  <section class="module" data-module="home">
+    <div class="home-hero">
+      <div class="home-hero-txt">
+        <div class="eyebrow">Wednesday · Jul 22</div>
+        <h1>You have <span class="grad-text">4 tasks</span> due today</h1>
+        <p>Two projects need review, and Ada shared a new brief with you.</p>
+        <div class="hero-cta">
+          <button class="btn btn-grad">Start focus mode</button>
+          <button class="btn btn-ghost">View schedule</button>
+        </div>
+      </div>
+      <div class="home-hero-viz">
+        <div class="ring">
+          <svg viewBox="0 0 120 120" width="180" height="180">
+            <circle cx="60" cy="60" r="52" stroke="rgba(255,255,255,.08)" stroke-width="10" fill="none"/>
+            <circle cx="60" cy="60" r="52" stroke="url(#g1)" stroke-width="10" fill="none" stroke-dasharray="326" stroke-dashoffset="98" stroke-linecap="round" transform="rotate(-90 60 60)"/>
+            <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset=".5" stop-color="#22d3ee"/><stop offset="1" stop-color="#f43f5e"/></linearGradient></defs>
+          </svg>
+          <div class="ring-txt"><b>70%</b><span>Week goal</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bento">
+      <div class="bento-card b-1">
+        <h3>Today's schedule</h3>
+        <div class="sched">
+          <div class="ev"><span class="ev-t">09:00</span><div><b>Standup</b><span>Design pod · 15 min</span></div></div>
+          <div class="ev"><span class="ev-t">11:30</span><div><b>Review — Beacon landing</b><span>with Ada &amp; Ken</span></div></div>
+          <div class="ev"><span class="ev-t">14:00</span><div><b>Focus block</b><span>Component library</span></div></div>
+          <div class="ev"><span class="ev-t">16:30</span><div><b>1:1 with Maya</b><span>Weekly sync</span></div></div>
+        </div>
+      </div>
+      <div class="bento-card b-2">
+        <div class="b2-num">14</div>
+        <div class="b2-lbl">Open tasks</div>
+        <div class="b2-split"><span class="s-hi">6 today</span><span>·</span><span>8 this week</span></div>
+      </div>
+      <div class="bento-card b-3">
+        <div class="b3-num">92</div>
+        <div class="b3-lbl">Focus score</div>
+        <div class="b3-bar"><i style="width:92%"></i></div>
+      </div>
+      <div class="bento-card b-4">
+        <h3>Recent projects</h3>
+        <ul class="mini-list">
+          <li><i class="pd" style="background:var(--violet)"></i>Beacon landing<span>72%</span></li>
+          <li><i class="pd" style="background:var(--cyan)"></i>Design system v3<span>45%</span></li>
+          <li><i class="pd" style="background:var(--rose)"></i>Orbit onboarding<span>88%</span></li>
+        </ul>
+      </div>
+      <div class="bento-card b-5">
+        <h3>Team pulse</h3>
+        <div class="team-row">
+          <div class="avatar user-av" style="width:32px;height:32px;font-size:11px">MC</div>
+          <div class="avatar" style="background:linear-gradient(135deg,#22d3ee,#10b981);width:32px;height:32px;font-size:11px">KI</div>
+          <div class="avatar" style="background:linear-gradient(135deg,#f43f5e,#f59e0b);width:32px;height:32px;font-size:11px">AR</div>
+          <div class="avatar" style="background:linear-gradient(135deg,#a855f7,#f43f5e);width:32px;height:32px;font-size:11px">DA</div>
+          <div class="more">+3</div>
+        </div>
+        <p>7 teammates online now</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="module hidden" data-module="projects">
+    <div class="section-head"><div><h1>Projects</h1><p>Track progress across your active work</p></div>
+      <button class="btn btn-grad">+ New project</button></div>
+    <div class="proj-grid">
+      <article class="proj-card">
+        <div class="proj-color" style="background:linear-gradient(135deg,#7c3aed,#a855f7)"></div>
+        <div class="proj-body">
+          <span class="proj-tag">In progress</span>
+          <h3>Beacon landing redesign</h3>
+          <p>Marketing site refresh for the Q3 launch</p>
+          <div class="progress"><i style="width:72%"></i></div>
+          <div class="proj-meta"><span>72% complete</span><span>Due Aug 8</span></div>
+          <div class="proj-team"><span class="avatar user-av xs">JM</span><span class="avatar xs" style="background:#22d3ee">KI</span><span class="avatar xs" style="background:#f43f5e">MC</span></div>
+        </div>
+      </article>
+      <article class="proj-card">
+        <div class="proj-color" style="background:linear-gradient(135deg,#22d3ee,#10b981)"></div>
+        <div class="proj-body">
+          <span class="proj-tag">Review</span>
+          <h3>Design system v3</h3>
+          <p>Tokens, components, motion guidelines</p>
+          <div class="progress"><i style="width:45%;background:linear-gradient(90deg,#22d3ee,#10b981)"></i></div>
+          <div class="proj-meta"><span>45% complete</span><span>Due Sep 1</span></div>
+          <div class="proj-team"><span class="avatar user-av xs">JM</span><span class="avatar xs" style="background:#a855f7">AR</span></div>
+        </div>
+      </article>
+      <article class="proj-card">
+        <div class="proj-color" style="background:linear-gradient(135deg,#f43f5e,#f59e0b)"></div>
+        <div class="proj-body">
+          <span class="proj-tag hot">Blocked</span>
+          <h3>Orbit onboarding</h3>
+          <p>New customer setup flow &amp; docs</p>
+          <div class="progress"><i style="width:88%;background:linear-gradient(90deg,#f43f5e,#f59e0b)"></i></div>
+          <div class="proj-meta"><span>88% complete</span><span>Due Jul 30</span></div>
+          <div class="proj-team"><span class="avatar user-av xs">JM</span><span class="avatar xs" style="background:#22d3ee">KI</span><span class="avatar xs" style="background:#a3e635">DA</span></div>
+        </div>
+      </article>
+      <article class="proj-card">
+        <div class="proj-color" style="background:linear-gradient(135deg,#a3e635,#10b981)"></div>
+        <div class="proj-body">
+          <span class="proj-tag">Planning</span>
+          <h3>Mobile app MVP</h3>
+          <p>iOS + Android beta preview</p>
+          <div class="progress"><i style="width:18%;background:linear-gradient(90deg,#a3e635,#10b981)"></i></div>
+          <div class="proj-meta"><span>18% complete</span><span>Due Oct 15</span></div>
+          <div class="proj-team"><span class="avatar user-av xs">JM</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Tasks — kanban -->
+  <section class="module hidden" data-module="tasks">
+    <div class="section-head"><div><h1>Tasks</h1><p>Kanban board · drag mentally, we'll track completion</p></div>
+      <button class="btn btn-grad">+ New task</button></div>
+    <div class="kanban">
+      <div class="kcol">
+        <div class="kcol-head"><span class="kdot" style="background:var(--muted)"></span>Backlog<span class="kcount">5</span></div>
+        <div class="kcard"><span class="ktag t-cyan">Design</span><h4>Redesign pricing table</h4><div class="kmeta"><span>Beacon</span><span>Aug 2</span></div></div>
+        <div class="kcard"><span class="ktag t-violet">Research</span><h4>User interviews · SMBs</h4><div class="kmeta"><span>Orbit</span><span>Aug 5</span></div></div>
+        <div class="kcard"><span class="ktag t-amber">Content</span><h4>Draft launch email</h4><div class="kmeta"><span>Beacon</span><span>Aug 6</span></div></div>
+      </div>
+      <div class="kcol">
+        <div class="kcol-head"><span class="kdot" style="background:var(--cyan)"></span>In progress<span class="kcount">4</span></div>
+        <div class="kcard"><span class="ktag t-violet">Design</span><h4>Hero animation prototype</h4><div class="kmeta"><span>Beacon</span><span>Today</span></div><div class="progress sm"><i style="width:65%"></i></div></div>
+        <div class="kcard"><span class="ktag t-cyan">Dev</span><h4>Component tokens migration</h4><div class="kmeta"><span>DS v3</span><span>Fri</span></div><div class="progress sm"><i style="width:40%;background:var(--cyan)"></i></div></div>
+        <div class="kcard"><span class="ktag t-amber">Docs</span><h4>Onboarding walkthrough</h4><div class="kmeta"><span>Orbit</span><span>Thu</span></div><div class="progress sm"><i style="width:80%;background:var(--rose)"></i></div></div>
+      </div>
+      <div class="kcol">
+        <div class="kcol-head"><span class="kdot" style="background:var(--amber)"></span>Review<span class="kcount">3</span></div>
+        <div class="kcard"><span class="ktag t-cyan">Design</span><h4>Nav variants v2</h4><div class="kmeta"><span>Beacon</span><span>Waiting on Ada</span></div></div>
+        <div class="kcard"><span class="ktag t-violet">Dev</span><h4>Motion tokens PR</h4><div class="kmeta"><span>DS v3</span><span>2 reviewers</span></div></div>
+      </div>
+      <div class="kcol">
+        <div class="kcol-head"><span class="kdot" style="background:var(--lime)"></span>Done<span class="kcount">12</span></div>
+        <div class="kcard done"><span class="ktag t-green">Shipped</span><h4>Empty states illustrations</h4><div class="kmeta"><span>DS v3</span><span>Yesterday</span></div></div>
+        <div class="kcard done"><span class="ktag t-green">Shipped</span><h4>Auth redirect fix</h4><div class="kmeta"><span>Orbit</span><span>Mon</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Messages -->
+  <section class="module hidden" data-module="messages">
+    <div class="section-head"><div><h1>Messages</h1><p>Team conversations in one place</p></div></div>
+    <div class="chat-wrap">
+      <div class="chat-list">
+        <div class="chat-item active">
+          <div class="avatar" style="background:linear-gradient(135deg,#7c3aed,#a855f7);width:40px;height:40px">MC</div>
+          <div class="ci-body"><div class="ci-head"><b>Maya Chen</b><span>2m</span></div><span class="ci-msg">Ready to review the hero variants?</span></div>
+          <span class="unread">2</span>
+        </div>
+        <div class="chat-item">
+          <div class="avatar" style="background:linear-gradient(135deg,#22d3ee,#10b981);width:40px;height:40px">KI</div>
+          <div class="ci-body"><div class="ci-head"><b>Ken Ito</b><span>1h</span></div><span class="ci-msg">Merged the tokens PR 🎉</span></div>
+        </div>
+        <div class="chat-item">
+          <div class="avatar" style="background:linear-gradient(135deg,#f43f5e,#f59e0b);width:40px;height:40px">AR</div>
+          <div class="ci-body"><div class="ci-head"><b>Ada Reyes</b><span>3h</span></div><span class="ci-msg">Shared new brief · Beacon</span></div>
+          <span class="unread">1</span>
+        </div>
+        <div class="chat-item">
+          <div class="avatar" style="background:linear-gradient(135deg,#a3e635,#10b981);width:40px;height:40px">DS</div>
+          <div class="ci-body"><div class="ci-head"><b>#design-pod</b><span>1d</span></div><span class="ci-msg">Rin: Motion draft is live</span></div>
+        </div>
+      </div>
+      <div class="chat-panel">
+        <div class="chat-head">
+          <div class="avatar" style="background:linear-gradient(135deg,#7c3aed,#a855f7);width:40px;height:40px">MC</div>
+          <div><b>Maya Chen</b><div style="color:var(--lime);font-size:12px">● online</div></div>
+        </div>
+        <div class="chat-body">
+          <div class="bubble b-in">Hey! Are you free for a quick review?</div>
+          <div class="bubble b-out">Yes, opening the file now.</div>
+          <div class="bubble b-in">Ready to review the hero variants?</div>
+          <div class="bubble b-in">I like V2 the most so far.</div>
+          <div class="bubble b-out">Same. I'll polish the motion timing tonight.</div>
+        </div>
+        <div class="chat-input">
+          <input placeholder="Write a message…"/>
+          <button class="btn btn-grad">Send</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Billing -->
+  <section class="module hidden" data-module="billing">
+    <div class="section-head"><div><h1>Billing</h1><p>Your plan, usage and invoices</p></div></div>
+    <div class="bill-grid">
+      <div class="plan-card">
+        <div class="plan-tag">Current plan</div>
+        <h2>Pro</h2>
+        <div class="plan-price">$24<span>/ user / month</span></div>
+        <ul class="plan-list">
+          <li>✓ Unlimited projects</li>
+          <li>✓ Advanced analytics</li>
+          <li>✓ Priority support</li>
+          <li>✓ 100GB storage</li>
+        </ul>
+        <button class="btn btn-grad" style="width:100%">Upgrade to Scale</button>
+      </div>
+      <div class="card">
+        <h3>Usage this month</h3>
+        <div class="usage"><div class="u-row"><span>Storage</span><span>62 / 100 GB</span></div><div class="progress"><i style="width:62%"></i></div></div>
+        <div class="usage"><div class="u-row"><span>Team seats</span><span>8 / 20</span></div><div class="progress"><i style="width:40%;background:var(--cyan)"></i></div></div>
+        <div class="usage"><div class="u-row"><span>API calls</span><span>184k / 500k</span></div><div class="progress"><i style="width:37%;background:var(--rose)"></i></div></div>
+        <div class="usage"><div class="u-row"><span>Active projects</span><span>6</span></div><div class="progress"><i style="width:30%;background:var(--lime)"></i></div></div>
+      </div>
+      <div class="card wide">
+        <h3>Invoices</h3>
+        <table class="tbl">
+          <thead><tr><th>Invoice</th><th>Plan</th><th>Amount</th><th>Status</th><th>Date</th><th></th></tr></thead>
+          <tbody>
+            <tr><td>INV-2411</td><td>Pro · 8 seats</td><td>$192.00</td><td><span class="tag t-green">Paid</span></td><td>Jul 1, 2026</td><td><a href="#" style="color:var(--cyan)">Download</a></td></tr>
+            <tr><td>INV-2384</td><td>Pro · 8 seats</td><td>$192.00</td><td><span class="tag t-green">Paid</span></td><td>Jun 1, 2026</td><td><a href="#" style="color:var(--cyan)">Download</a></td></tr>
+            <tr><td>INV-2361</td><td>Pro · 7 seats</td><td>$168.00</td><td><span class="tag t-green">Paid</span></td><td>May 1, 2026</td><td><a href="#" style="color:var(--cyan)">Download</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Profile -->
+  <section class="module hidden" data-module="profile">
+    <div class="profile-hero">
+      <div class="avatar user-av xl">JM</div>
+      <div>
+        <h1>Jules Moreau</h1>
+        <p>Product Designer · Orbit Labs · Paris, FR</p>
+        <div class="badges">
+          <span class="tag t-violet">Pro Member</span>
+          <span class="tag t-cyan">Verified</span>
+          <span class="tag t-green">2FA On</span>
+        </div>
+      </div>
+    </div>
+    <div class="prof-grid">
+      <div class="card">
+        <h3>Personal information</h3>
+        <label class="lbl">Full name<input value="Jules Moreau"/></label>
+        <label class="lbl">Email<input value="jules@orbit.co"/></label>
+        <label class="lbl">Role<input value="Product Designer"/></label>
+        <label class="lbl">Timezone<input value="Europe/Paris (UTC+2)"/></label>
+        <button class="btn btn-grad">Save changes</button>
+      </div>
+      <div class="card">
+        <h3>Preferences</h3>
+        <div class="toggle-row"><span>Dark mode</span><label class="switch"><input type="checkbox" checked><i></i></label></div>
+        <div class="toggle-row"><span>Email digests</span><label class="switch"><input type="checkbox" checked><i></i></label></div>
+        <div class="toggle-row"><span>Weekly focus report</span><label class="switch"><input type="checkbox"><i></i></label></div>
+        <div class="toggle-row"><span>Sound effects</span><label class="switch"><input type="checkbox" checked><i></i></label></div>
+      </div>
+      <div class="card">
+        <h3>Achievements</h3>
+        <div class="ach-grid">
+          <div class="ach"><div class="ach-ico" style="background:var(--grad)">★</div><b>Streak · 21 days</b><span>Daily check-ins</span></div>
+          <div class="ach"><div class="ach-ico" style="background:linear-gradient(135deg,#22d3ee,#10b981)">✓</div><b>100 tasks done</b><span>This quarter</span></div>
+          <div class="ach"><div class="ach-ico" style="background:linear-gradient(135deg,#f43f5e,#f59e0b)">◆</div><b>Top contributor</b><span>Design pod</span></div>
+          <div class="ach"><div class="ach-ico" style="background:linear-gradient(135deg,#a3e635,#10b981)">↑</div><b>Level 12</b><span>3,240 XP</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="js/user.js"></script>
+</body>
+</html>
