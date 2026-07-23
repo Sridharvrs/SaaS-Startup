@@ -12,8 +12,18 @@ if (currentUser) {
   const sbClose = document.getElementById('sbClose');
   const greeting = document.getElementById('greeting');
 
-  function openSb(){ sidebar.classList.add('open'); backdrop.classList.add('show'); }
-  function closeSb(){ sidebar.classList.remove('open'); backdrop.classList.remove('show'); }
+  function openSb(){
+    sidebar.classList.add('open');
+    backdrop.classList.add('show');
+    document.body.classList.add('menu-open');
+}
+
+function closeSb(){
+    sidebar.classList.remove('open');
+    backdrop.classList.remove('show');
+    document.body.classList.remove('menu-open');
+}
+
   menuBtn.addEventListener('click', openSb);
   sbClose.addEventListener('click', closeSb);
   backdrop.addEventListener('click', closeSb);
@@ -62,3 +72,9 @@ if (currentUser) {
   if (chatSend) chatSend.addEventListener('click', send);
   if (chatInput) chatInput.addEventListener('keydown', e => { if (e.key === 'Enter') send(); });
 })();
+
+window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) {
+        closeSb();
+    }
+});
