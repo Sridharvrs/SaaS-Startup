@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>NovaFlow — Admin Control Center</title>
+<title>Stackly — Admin Control Center</title>
 <link rel="stylesheet" href="css/dashboards.css" />
 <link rel="stylesheet" href="css/admin.css" />
 </head>
@@ -14,14 +14,14 @@
   <div class="sb-head">
     <div class="brand">
       <span class="logo-dot"></span>
-      <span>NovaFlow</span>
+      <span>Stackly</span>
     </div>
     <button class="sb-close" id="sbClose" aria-label="Close menu">✕</button>
   </div>
   <div class="sb-role">
     <div class="avatar admin-av">AD</div>
     <div>
-      <div class="sb-name">Ada Reyes</div>
+      <div class="sb-name"><h3 id="profileName"></h3></div>
       <div class="sb-sub">Super Admin</div>
     </div>
   </div>
@@ -66,8 +66,8 @@
         <h1>Platform is healthy — 4 alerts to review</h1>
       </div>
       <div class="hero-actions">
-        <button class="btn btn-ghost">Export</button>
-        <button class="btn btn-grad">New announcement</button>
+        <button class="btn btn-ghost" onclick="window.location.href = 'dashboarderror.html'">Export</button>
+        <button class="btn btn-grad" onclick="window.location.href = 'dashboarderror.html'">New announcement</button>
       </div>
     </div>
 
@@ -138,8 +138,8 @@
     <div class="section-head">
       <div><h1>Users</h1><p>12,482 total · 348 new this week</p></div>
       <div class="hero-actions">
-        <button class="btn btn-ghost">Import CSV</button>
-        <button class="btn btn-grad">+ Invite user</button>
+        <button class="btn btn-ghost" onclick="window.location.href = 'dashboarderror.html'">Import CSV</button>
+        <button class="btn btn-grad"  onclick="window.location.href = 'dashboarderror.html'">+ Invite user</button>
       </div>
     </div>
     <div class="filter-row">
@@ -182,9 +182,9 @@
   <!-- Products -->
   <section class="module hidden" data-module="products">
     <div class="section-head"><div><h1>Products</h1><p>Manage plans, features & feature flags</p></div>
-      <button class="btn btn-grad">+ New product</button></div>
+      <button class="btn btn-grad" onclick="window.location.href = 'dashboarderror.html'">+ New product</button></div>
     <div class="prod-grid">
-      <div class="prod-card"><div class="prod-tag">Core</div><h3>NovaFlow Cloud</h3><p>Realtime collaboration platform</p><div class="prod-stats"><span>3,204 seats</span><span>$142k MRR</span></div><div class="flags"><span class="flag on">RBAC</span><span class="flag on">SSO</span><span class="flag">Audit v2</span></div></div>
+      <div class="prod-card"><div class="prod-tag">Core</div><h3>Stackly Cloud</h3><p>Realtime collaboration platform</p><div class="prod-stats"><span>3,204 seats</span><span>$142k MRR</span></div><div class="flags"><span class="flag on">RBAC</span><span class="flag on">SSO</span><span class="flag">Audit v2</span></div></div>
       <div class="prod-card"><div class="prod-tag alt">Add-on</div><h3>AI Assistant</h3><p>Agentic AI for automated workflows</p><div class="prod-stats"><span>1,824 seats</span><span>$31k MRR</span></div><div class="flags"><span class="flag on">GPT</span><span class="flag on">Claude</span><span class="flag">Local LLM</span></div></div>
       <div class="prod-card"><div class="prod-tag alt2">Beta</div><h3>Insights Pro</h3><p>Analytics & dashboards</p><div class="prod-stats"><span>486 seats</span><span>$11k MRR</span></div><div class="flags"><span class="flag on">Dashboards</span><span class="flag">Forecast</span></div></div>
     </div>
@@ -205,11 +205,11 @@
   <section class="module hidden" data-module="audit">
     <div class="section-head"><div><h1>Audit Log</h1><p>Immutable record of admin actions</p></div></div>
     <div class="timeline">
-      <div class="tl-item"><span class="tl-dot" style="background:var(--violet)"></span><div><b>ada.reyes@novaflow.io</b> changed role of <b>ken@lumen.io</b> to Editor<div class="tl-meta">Today · 14:22 · IP 10.4.1.9</div></div></div>
+      <div class="tl-item"><span class="tl-dot" style="background:var(--violet)"></span><div><b>ada.reyes@Stackly.io</b> changed role of <b>ken@lumen.io</b> to Editor<div class="tl-meta">Today · 14:22 · IP 10.4.1.9</div></div></div>
       <div class="tl-item"><span class="tl-dot" style="background:var(--cyan)"></span><div><b>system</b> rotated API key <code>sk_live_***a2f</code><div class="tl-meta">Today · 09:03</div></div></div>
       <div class="tl-item"><span class="tl-dot" style="background:var(--rose)"></span><div><b>ada.reyes</b> deleted workspace <b>Beta-Sandbox</b><div class="tl-meta">Yesterday · 18:41</div></div></div>
       <div class="tl-item"><span class="tl-dot" style="background:var(--lime)"></span><div><b>deploy-bot</b> shipped release <b>v2.14.3</b><div class="tl-meta">Yesterday · 12:10</div></div></div>
-      <div class="tl-item"><span class="tl-dot" style="background:var(--amber)"></span><div><b>rin@novaflow.io</b> exported user list (12,482 rows)<div class="tl-meta">Jul 20 · 15:03</div></div></div>
+      <div class="tl-item"><span class="tl-dot" style="background:var(--amber)"></span><div><b>rin@Stackly.io</b> exported user list (12,482 rows)<div class="tl-meta">Jul 20 · 15:03</div></div></div>
     </div>
   </section>
 
@@ -219,10 +219,10 @@
     <div class="settings-grid">
       <div class="card">
         <h3>Branding</h3>
-        <label class="lbl">Platform name<input value="NovaFlow"/></label>
+        <label class="lbl">Platform name<input value="Stackly"/></label>
         <label class="lbl">Primary color<input type="color" value="#7c3aed"/></label>
-        <label class="lbl">Support email<input value="hello@novaflow.io"/></label>
-        <button class="btn btn-grad">Save changes</button>
+        <label class="lbl">Support email<input value="hello@Stackly.io"/></label>
+        <button class="btn btn-grad" onclick="window.location.href = 'dashboarderror.html'">Save changes</button>
       </div>
       <div class="card">
         <h3>Security</h3>

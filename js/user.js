@@ -1,3 +1,9 @@
+const currentUser = JSON.parse(sessionStorage.getItem("currentUser"));
+
+if (currentUser) {
+    document.getElementById("profileName").textContent = currentUser.name;
+}
+
 // Member workspace behaviors
 (function(){
   const sidebar = document.getElementById('sidebar');

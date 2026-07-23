@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>NovaFlow — Member Workspace</title>
+<title>Stackly — Member Workspace</title>
 <link rel="stylesheet" href="css/dashboards.css" />
 <link rel="stylesheet" href="css/user.css" />
 </head>
@@ -11,18 +11,18 @@
 
 <aside class="sidebar u-side" id="sidebar">
   <div class="sb-head">
-    <div class="brand"><span class="logo-dot"></span><span>NovaFlow</span></div>
+    <div class="brand"><span class="logo-dot"></span><span>Stackly</span></div>
     <button class="sb-close" id="sbClose" aria-label="Close">✕</button>
   </div>
   <div class="u-profile">
     <div class="avatar user-av">JM</div>
     <div>
-      <div class="sb-name">Jules Moreau</div>
+      <div class="sb-name"><h3 id="profileName"></h3></div>
       <div class="sb-sub">Pro member · Orbit Labs</div>
     </div>
   </div>
   <nav class="sb-nav">
-    <button class="sb-link active" data-module="home"><span class="ic">◐</span>Home</button>
+    <button class="sb-link active" data-module="home" ><span class="ic">◐</span>Home</button>
     <button class="sb-link" data-module="projects"><span class="ic">▤</span>Projects <span class="count">6</span></button>
     <button class="sb-link" data-module="tasks"><span class="ic">✓</span>Tasks <span class="count">14</span></button>
     <button class="sb-link" data-module="messages"><span class="ic">✎</span>Messages <span class="count hot">3</span></button>
@@ -56,8 +56,8 @@
         <h1>You have <span class="grad-text">4 tasks</span> due today</h1>
         <p>Two projects need review, and Ada shared a new brief with you.</p>
         <div class="hero-cta">
-          <button class="btn btn-grad">Start focus mode</button>
-          <button class="btn btn-ghost">View schedule</button>
+          <button class="btn btn-grad" onclick="window.location.href = 'dashboarderror.html'">Start focus mode</button>
+          <button class="btn btn-ghost" onclick="window.location.href = 'dashboarderror.html'">View schedule</button>
         </div>
       </div>
       <div class="home-hero-viz">
@@ -117,7 +117,7 @@
   <!-- Projects -->
   <section class="module hidden" data-module="projects">
     <div class="section-head"><div><h1>Projects</h1><p>Track progress across your active work</p></div>
-      <button class="btn btn-grad">+ New project</button></div>
+      <button class="btn btn-grad" onclick="window.location.href = 'dashboarderror.html'">+ New project</button></div>
     <div class="proj-grid">
       <article class="proj-card">
         <div class="proj-color" style="background:linear-gradient(135deg,#7c3aed,#a855f7)"></div>
@@ -169,7 +169,7 @@
   <!-- Tasks — kanban -->
   <section class="module hidden" data-module="tasks">
     <div class="section-head"><div><h1>Tasks</h1><p>Kanban board · drag mentally, we'll track completion</p></div>
-      <button class="btn btn-grad">+ New task</button></div>
+      <button class="btn btn-grad" onclick="window.location.href = 'dashboarderror.html'">+ New task</button></div>
     <div class="kanban">
       <div class="kcol">
         <div class="kcol-head"><span class="kdot" style="background:var(--muted)"></span>Backlog<span class="kcount">5</span></div>
@@ -234,7 +234,7 @@
         </div>
         <div class="chat-input">
           <input placeholder="Write a message…"/>
-          <button class="btn btn-grad">Send</button>
+          <button class="btn btn-grad" onclick="window.location.href = 'dashboarderror.html'">Send</button>
         </div>
       </div>
     </div>
@@ -254,7 +254,7 @@
           <li>✓ Priority support</li>
           <li>✓ 100GB storage</li>
         </ul>
-        <button class="btn btn-grad" style="width:100%">Upgrade to Scale</button>
+        <button class="btn btn-grad" style="width:100%" onclick="window.location.href = 'dashboarderror.html'">Upgrade to Scale</button>
       </div>
       <div class="card">
         <h3>Usage this month</h3>
@@ -298,7 +298,7 @@
         <label class="lbl">Email<input value="jules@orbit.co"/></label>
         <label class="lbl">Role<input value="Product Designer"/></label>
         <label class="lbl">Timezone<input value="Europe/Paris (UTC+2)"/></label>
-        <button class="btn btn-grad">Save changes</button>
+        <button class="btn btn-grad" onclick="window.location.href = 'dashboarderror.html'">Save changes</button>
       </div>
       <div class="card">
         <h3>Preferences</h3>

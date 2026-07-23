@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Contact — Nebula</title>
+<title>Contact — Stackly</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -17,8 +17,10 @@
 <header class="nav" id="nav">
   <div class="container nav-inner">
     <a href="index.html" class="brand">
-      <span class="brand-mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2L14 9L21 11L14 13L12 20L10 13L3 11L10 9L12 2Z" fill="#22d3ee"/></svg></span>
-      Nebula
+        <span class="brand-mark">
+            <img src="images/logo.webp" alt="Stackly Logo">
+        </span>
+        <!-- <span class="brand-name">Stackly</span> -->
     </a>
     <nav class="nav-links">
       <a href="index.html" data-nav>Home</a>
@@ -43,7 +45,27 @@
   <a href="contact.html" class="mm-link" data-nav>Contact</a>
   <a href="login.html" class="btn btn-ghost mm-login">Log in</a>
   <a href="pricing.html" class="btn btn-primary mm-cta">Start free trial</a>
-  <p class="mm-foot">© <span data-year></span> Nebula Labs, Inc.</p>
+  <div class="mm-contact">
+
+      <h4>Get in touch</h4>
+
+      <a href="tel:+919876543210">
+          <i class="fa-solid fa-phone"></i>
+          +91 98765 43210
+      </a>
+
+      <a href="mailto:hello@stackly.com">
+         <i class="fa-solid fa-envelope"></i>
+        hello@stackly.com
+      </a>
+
+      <a href="#">
+         <i class="fa-solid fa-location-dot"></i>
+         Chennai, Tamil Nadu
+      </a>
+
+  </div>
+  <p class="mm-foot">© <span data-year></span> Stackly Labs, Inc.</p>
 </aside>
 <div class="menu-backdrop" id="menuBackdrop"></div>
 
@@ -54,7 +76,7 @@
 ===================================================-->
 
 <!--==================================================
-                NEBULA CONTACT HERO
+                Stackly CONTACT HERO
 ===================================================-->
 
 <section class="nbx-contact-hero">
@@ -84,7 +106,7 @@
                 </h1>
 
                 <p class="nbx-description">
-                    Whether you're exploring Nebula, looking for technical
+                    Whether you're exploring Stackly, looking for technical
                     guidance, or planning an enterprise deployment, our experts
                     are ready to help you build faster and smarter.
                 </p>
@@ -313,7 +335,7 @@
           <div class="field-row">
             <div class="field">
               <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Jane Doe" required />
+              <input type="text" id="name" name="name" placeholder="Jane Doe" oninput="this.value=this.value.replace(/[^a-zA-Z\s]/g,'')" required />
               <span class="err" data-for="name">Please enter your name.</span>
             </div>
             <div class="field">
@@ -322,10 +344,18 @@
               <span class="err" data-for="email">Enter a valid email.</span>
             </div>
           </div>
+
+          <div class="field">
+              <label for="name">Phone</label>
+              <input type="text" id="name" name="name" placeholder="+91 9865452312" oninput="this.value=this.value.replace(/[^0-9]/g,'')" required />
+              <span class="err" data-for="name">Please enter your number.</span>
+          </div>
+
           <div class="field">
             <label for="company">Company</label>
             <input type="text" id="company" name="company" placeholder="Acme Inc." />
           </div>
+
           <div class="field">
             <label for="topic">What's this about?</label>
             <div class="chip-group" id="topicGroup">
@@ -355,19 +385,19 @@
           <div class="info-icon" style="--c:var(--primary)">✦</div>
           <h3>Sales</h3>
           <p>Want a live demo or a custom quote? Our team will walk you through the platform on your data.</p>
-          <a href="mailto:sales@nebula.io">sales@nebula.io</a>
+          <a href="mailto:sales@Stackly.io">sales@Stackly.io</a>
         </div>
         <div class="info-block">
           <div class="info-icon" style="--c:var(--accent)">◈</div>
           <h3>Support</h3>
           <p>Existing customer? Our support engineers reply in under 2 hours during business hours.</p>
-          <a href="mailto:support@nebula.io">support@nebula.io</a>
+          <a href="mailto:support@Stackly.io">support@Stackly.io</a>
         </div>
         <div class="info-block">
           <div class="info-icon" style="--c:var(--lime)">⬢</div>
           <h3>Visit us</h3>
           <p>535 Mission St, Floor 9<br />San Francisco, CA 94105</p>
-          <a href="#">View on map →</a>
+          <a href="error.html">View on map →</a>
         </div>
         <div class="info-block highlight">
           <h3>Office hours</h3>
@@ -409,7 +439,7 @@
 
             <!-- Email -->
 
-            <div class="support-card reveal">
+            <div class="support-card reveal"  onclick="window.location.href = 'dashboarderror.html'">
 
                 <div class="support-icon">
                     <i class="fa-solid fa-envelope"></i>
@@ -440,7 +470,7 @@
 
                 </div>
 
-                <a href="mailto:support@nebula.io" class="support-btn">
+                <a href="error.html" class="support-btn">
                     Contact Support
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
@@ -449,7 +479,7 @@
 
             <!-- Live Chat -->
 
-            <div class="support-card featured reveal d1">
+            <div class="support-card featured reveal d1"  onclick="window.location.href = 'dashboarderror.html'">
 
                 <div class="support-badge">
                     Recommended
@@ -484,7 +514,7 @@
 
                 </div>
 
-                <a href="#" class="support-btn">
+                <a href="error.html" class="support-btn">
                     Start Chat
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
@@ -493,7 +523,7 @@
 
             <!-- Phone -->
 
-            <div class="support-card reveal d2">
+            <div class="support-card reveal d2" onclick="window.location.href = 'dashboarderror.html'">
 
                 <div class="support-icon">
                     <i class="fa-solid fa-phone"></i>
@@ -523,7 +553,7 @@
 
                 </div>
 
-                <a href="tel:+18001234567" class="support-btn">
+                <a href="error.html" class="support-btn">
                     Call Us
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
@@ -532,7 +562,7 @@
 
             <!-- Video Meeting -->
 
-            <div class="support-card reveal d3">
+            <div class="support-card reveal d3" onclick="window.location.href = 'dashboarderror.html'">
 
                 <div class="support-icon">
                     <i class="fa-solid fa-video"></i>
@@ -562,7 +592,7 @@
 
                 </div>
 
-                <a href="#" class="support-btn">
+                <a href="error.html" class="support-btn">
                     Book Demo
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
@@ -656,7 +686,7 @@
 
             <div class="office-map reveal d2">
 
-                <img src="https://source.unsplash.com/1600x900/?world,map,digital"
+                <img src="images/contact-map.webp"
                      alt="World Map">
 
                 <span class="marker sf"></span>
@@ -738,7 +768,7 @@
           <div class="faq-acc-body"><p>Yes — every workspace gets 14 days of Growth features on signup, no credit card required. Your data and dashboards persist if you drop to Starter afterward.</p></div>
         </div>
         <div class="faq-acc-item reveal d2">
-          <button class="faq-acc-head" aria-expanded="false">Can Nebula handle our data volume? <span class="acc-icon">+</span></button>
+          <button class="faq-acc-head" aria-expanded="false">Can Stackly handle our data volume? <span class="acc-icon">+</span></button>
           <div class="faq-acc-body"><p>We process 4.2B events daily across customers. Growth covers 50M events/month; Enterprise is unlimited. Talk to us if you're unsure — we'll size it together.</p></div>
         </div>
         <div class="faq-acc-item reveal d3">
@@ -754,27 +784,82 @@
   </section>
 </main>
 
+<!-- FOOTER -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="brand">
-          <span class="brand-mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2L14 9L21 11L14 13L12 20L10 13L3 11L10 9L12 2Z" fill="#22d3ee"/></svg></span>
-          Nebula
+            <span class="brand-mark">
+                <img src="images/logo.webp" alt="Stackly Logo">
+            </span>
+            <!-- <span class="brand-name">Stackly</span> -->
         </a>
         <p>The unified analytics platform for teams who treat data as a product, not a project.</p>
         <div class="socials">
-          <a href="#" aria-label="Twitter"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 5.8c-.7.3-1.5.5-2.3.6.8-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1a4 4 0 0 0-6.8 3.6A11.3 11.3 0 0 1 3 4.8a4 4 0 0 0 1.2 5.3c-.6 0-1.2-.2-1.7-.5a4 4 0 0 0 3.2 4 4 4 0 0 1-1.8.1 4 4 0 0 0 3.7 2.8A8 8 0 0 1 2 18.6a11.3 11.3 0 0 0 6.1 1.8c7.3 0 11.3-6 11.3-11.3v-.5c.8-.6 1.5-1.3 2-2.1z"/></svg></a>
-          <a href="#" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.4-2.2-.3-4.5-1.1-4.5-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.5 5 .3.3.7 1 .7 2v3c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg></a>
-          <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.6-2 3.9 0 4.5 2.5 4.5 5.8V21h-4v-5.3c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21H9z"/></svg></a>
+            <a href="error.html"><i class="fa-brands fa-facebook-f"></i></a>
+
+            <a href="error.html"><i class="fa-brands fa-instagram"></i></a>
+
+            <a href="error.html"><i class="fa-brands fa-x-twitter"></i></a>
+
+            <a href="error.html"><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
       </div>
-      <div class="footer-col"><h4>Product</h4><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="#">Integrations</a><a href="#">Changelog</a></div>
-      <div class="footer-col"><h4>Company</h4><a href="about.html">About</a><a href="#">Careers</a><a href="contact.html">Contact</a><a href="#">Blog</a></div>
-      <div class="footer-col"><h4>Resources</h4><a href="#">Docs</a><a href="#">API reference</a><a href="#">Community</a><a href="#">Status</a></div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="features.html">Features</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="error.html">Integrations</a>
+        <a href="error.html">Changelog</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="error.html">Careers</a>
+        <a href="contact.html">Contact</a>
+        <a href="error.html">Blog</a>
+      </div>
+      <!-- <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="error.html">Docs</a>
+        <a href="error.html">API reference</a>
+        <a href="error.html">Community</a>
+        <a href="error.html">Status</a>
+      </div> -->
+
+      <div class="footer-col footer-newsletter">
+          <h4>Newsletter</h4>
+
+          <p>
+              Get product updates, design inspiration, and feature releases delivered
+              to your inbox.
+          </p>
+
+          <form class="newsletter-form">
+
+              <div class="newsletter-input">
+
+                  <i class="fa-solid fa-envelope"></i>
+
+                  <input
+                      type="email"
+                      placeholder="Enter your email"
+                      required>
+
+              </div>
+
+              <button type="submit" class="btn btn-primary">
+                  Subscribe
+              </button>
+
+          </form>
+
+          <small>No spam. Unsubscribe anytime.</small>
+      </div>
     </div>
     <div class="footer-bottom">
-      <p>© <span data-year></span> Nebula Labs, Inc. All rights reserved.</p>
+      <p>© <span data-year></span> Stackly Labs, Inc. All rights reserved.</p>
       <p>Made with precision in San Francisco</p>
     </div>
   </div>
