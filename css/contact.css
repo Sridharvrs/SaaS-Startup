@@ -2242,3 +2242,218 @@
     }
 
 }
+
+
+
+
+
+
+
+/* ================== hero page mediaquerry ====================== */
+/*======================================
+        1200px
+======================================*/
+
+@media (max-width:1200px){
+
+    .nbx-hero-wrapper{
+        gap:50px;
+    }
+
+    .nbx-title{
+        font-size:54px;
+    }
+
+    .nbx-dashboard-card{
+        padding:28px;
+    }
+
+}
+
+
+/*======================================
+        992px
+======================================*/
+
+@media (max-width:992px){
+
+    .nbx-contact-hero{
+        padding:120px 0 80px;
+    }
+
+    .nbx-hero-wrapper{
+        grid-template-columns:1fr;
+        gap:60px;
+    }
+
+    .nbx-content{
+        text-align:center;
+    }
+
+    .nbx-badge{
+        margin:auto;
+    }
+
+    .nbx-actions{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .nbx-metrics{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .nbx-dashboard{
+        max-width:650px;
+        width:100%;
+        margin:auto;
+    }
+
+}
+
+
+/*======================================
+        768px
+======================================*/
+
+@media (max-width:768px){
+
+    .nbx-contact-hero{
+        padding:100px 0 70px;
+    }
+
+    .nbx-title{
+        font-size:42px;
+        line-height:1.2;
+    }
+
+    .nbx-description{
+        font-size:16px;
+    }
+
+    .nbx-actions{
+        flex-direction:column;
+        width:100%;
+        gap:15px;
+    }
+
+    .nbx-btn-primary,
+    .nbx-btn-secondary{
+        width:100%;
+        justify-content:center;
+    }
+
+    .nbx-metrics{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:16px;
+    }
+
+    .nbx-metric{
+        width:100%;
+    }
+
+    .nbx-dashboard-card{
+        padding:24px;
+    }
+
+    .nbx-support-row{
+        padding:14px;
+    }
+
+    .nbx-footer-stats{
+        grid-template-columns:1fr;
+        gap:15px;
+    }
+
+}
+
+
+/*======================================
+        576px
+======================================*/
+
+@media (max-width:576px){
+
+    .nbx-title{
+        font-size:34px;
+    }
+
+    .nbx-badge{
+        font-size:13px;
+        padding:10px 16px;
+    }
+
+    .nbx-dashboard-card{
+        padding:20px;
+        border-radius:22px;
+    }
+
+    .nbx-dashboard-header h3{
+        font-size:20px;
+    }
+
+    .nbx-dashboard-header p{
+        font-size:13px;
+    }
+
+    .nbx-support-row{
+        flex-wrap:wrap;
+        gap:10px;
+    }
+
+    .nbx-support-row p{
+        font-size:15px;
+    }
+
+    .nbx-support-row small{
+        margin-left:auto;
+    }
+
+    .nbx-queue-head{
+        font-size:14px;
+    }
+
+    .nbx-footer-stats div{
+        padding:16px;
+    }
+
+}
+
+
+/*======================================
+        420px
+======================================*/
+
+@media (max-width:420px){
+
+    .nbx-contact-hero{
+        padding:90px 0 60px;
+    }
+
+    .nbx-title{
+        font-size:28px;
+    }
+
+    .nbx-description{
+        font-size:15px;
+    }
+
+    .nbx-dashboard-card{
+        padding:18px;
+    }
+
+    .nbx-badge{
+        font-size:12px;
+    }
+
+    .nbx-metric{
+        padding:14px;
+    }
+
+    .nbx-footer-stats{
+        gap:12px;
+    }
+
+}
