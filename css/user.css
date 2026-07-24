@@ -342,6 +342,10 @@
     font-size:20px;
 }
 
+.mobile-logo{
+  display: none;
+}
+
 @media(max-width:768px){
 
     .welcome-banner{
@@ -356,6 +360,10 @@
     .welcome-card{
         width:100%;
         justify-content:center;
+    }
+
+    .mobile-logo{
+      display: block;
     }
 
 }
