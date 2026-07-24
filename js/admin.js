@@ -1,7 +1,9 @@
 const currentUser = JSON.parse(sessionStorage.getItem("currentUser"));
 
 if (currentUser) {
-    document.getElementById("profileName").textContent = currentUser.name;
+    document.querySelectorAll(".profileName").forEach(element => {
+        element.textContent = currentUser.name;
+    });
 }
 
 // Admin dashboard behaviors

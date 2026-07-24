@@ -24,7 +24,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
   <div class="u-profile">
     <div class="avatar user-av">JM</div>
     <div>
-      <div class="sb-name"><h3 id="profileName"></h3></div>
+      <div class="sb-name"><h3 class="profileName">Guest User</h3></div>
       <div class="sb-sub">Pro member · Orbit Labs</div>
     </div>
   </div>
@@ -36,11 +36,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     <button class="sb-link" data-module="billing"><span class="ic">$</span>Billing</button>
     <button class="sb-link" data-module="profile"><span class="ic">◉</span>Profile</button>
   </nav>
-  <div class="upgrade-card">
+  <!-- <div class="upgrade-card">
     <div class="up-title">Unlock Scale</div>
     <div class="up-sub">Unlimited seats, priority support</div>
     <button class="btn btn-grad" style="width:100%;margin-top:10px" onclick="window.location.href = 'dashboarderror.html'">Upgrade</button>
-  </div>
+  </div> -->
   <div class="sb-foot">
     <a href="index.html" class="sb-logout">
         <i class="fa-solid fa-right-from-bracket"></i>
@@ -53,7 +53,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 <main class="main u-main">
   <header class="u-top">
     <button class="menu-btn" id="menuBtn"><span></span><span></span><span></span></button>
-    <div class="greeting" id="greeting">Good afternoon,<h3 id="profileName"></h3></div>
+    <!-- <div class="greeting" id="greeting">Good afternoon,<h3 id="profileName"></h3></div> -->
     <div class="u-top-actions">
       <div class="search"><input placeholder="Search projects, tasks…"/></div>
       <button class="icon-btn">🔔<span class="dot"></span></button>
@@ -62,7 +62,38 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
   <!-- Home -->
   <section class="module" data-module="home">
+
+    <section class="welcome-banner">
+
+    <div class="welcome-left">
+
+        <span class="welcome-tag">
+            <i class="fa-solid fa-hand-sparkles"></i>
+            Welcome Back
+        </span>
+
+        <h2>
+            Hello, <span class="profileName"></span> 👋
+        </h2>
+
+    </div>
+
+    <div class="welcome-right">
+
+        <div class="welcome-card">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <span>Everything is running smoothly.</span>
+
+        </div>
+
+    </div>
+
+</section>
+
     <div class="home-hero">
+
       <div class="home-hero-txt">
         <div class="eyebrow">Wednesday · Jul 22</div>
         <h1>You have <span class="grad-text">4 tasks</span> due today</h1>
@@ -294,7 +325,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     <div class="profile-hero">
       <div class="avatar user-av xl">JM</div>
       <div>
-        <h3 id="profileName">admin</h3>
+        <h3 class="profileName">admin</h3>
         <p>Product Designer · Orbit Labs · Paris, FR</p>
         <div class="badges">
           <span class="tag t-violet">Pro Member</span>

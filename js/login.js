@@ -218,6 +218,14 @@ sessionStorage.setItem(
     JSON.stringify(currentUser)
 );
 
+/*==============================
+    CLEAR LOGIN FORM
+==============================*/
+
+loginForm.reset();
+email.value = "";
+password.value = "";
+
 // Redirect
 if (selectedRole === "admin") {
     window.location.href = "admin-dashboard.html";
